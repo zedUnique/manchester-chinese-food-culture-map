@@ -582,9 +582,19 @@ function dishDietaryNote(dish) {
   return dish.dietary ? dish.dietaryNote : FOOD_DISH_DIETARY_PROFILES[dish.name]?.note;
 }
 
-function dishHasAvoidedTag(dish) {
+function vegetarianFilterActive() {
+  return state.dietaryAvoids.includes("vegetarian");
+}
+
+function activeAvoidTags() {
+  return state.dietaryAvoids.filter((filterId) => filterId !== "vegetarian");
+}
+
+function dishHasDietaryConflict(dish) {
   const tags = dishDietaryTags(dish);
-  return state.dietaryAvoids.some((avoidId) => tags.includes(avoidId));
+  const hasAvoidedIngredient = activeAvoidTags().some((avoidId) => tags.includes(avoidId));
+  const missesVegetarianRequirement = vegetarianFilterActive() && !tags.includes("vegetarian");
+  return hasAvoidedIngredient || missesVegetarianRequirement;
 }
 
 function dishDietaryChips(dish) {
@@ -592,13 +602,18 @@ function dishDietaryChips(dish) {
   const primaryTags = tags.filter((tag) => tag !== "halal" && tag !== "vegetarian").slice(0, 4);
   const supportTags = tags.filter((tag) => tag === "halal" || tag === "vegetarian");
   return [...primaryTags, ...supportTags]
-    .map((tag) => `<span class="${state.dietaryAvoids.includes(tag) ? "is-warning" : ""}">${dietaryLabels[tag]}</span>`)
+    .map((tag) => {
+      const stateClass = tag === "vegetarian" && vegetarianFilterActive()
+        ? "is-match"
+        : activeAvoidTags().includes(tag) ? "is-warning" : "";
+      return `<span class="${stateClass}">${dietaryLabels[tag]}</span>`;
+    })
     .join("");
 }
 
 function restaurantHasSafeDish(restaurant) {
   if (!state.dietaryAvoids.length) return true;
-  return restaurant.dishes.some((dish) => !dishHasAvoidedTag(dish));
+  return restaurant.dishes.some((dish) => !dishHasDietaryConflict(dish));
 }
 
 function currentProvince() {
@@ -638,13 +653,13 @@ function currentDish(restaurant = currentRestaurant()) {
   if (!restaurant) return null;
   if (state.dishIndex !== null) {
     const selectedDish = restaurant.dishes[state.dishIndex];
-    if (selectedDish && !dishHasAvoidedTag(selectedDish)) return selectedDish;
+    if (selectedDish && !dishHasDietaryConflict(selectedDish)) return selectedDish;
   }
 
   const province = currentProvince();
   return (
-    restaurant.dishes.find((dish) => dish.province === province.name && !dishHasAvoidedTag(dish)) ||
-    restaurant.dishes.find((dish) => !dishHasAvoidedTag(dish)) ||
+    restaurant.dishes.find((dish) => dish.province === province.name && !dishHasDietaryConflict(dish)) ||
+    restaurant.dishes.find((dish) => !dishHasDietaryConflict(dish)) ||
     restaurant.dishes[0] ||
     null
   );
@@ -1019,7 +1034,8 @@ function renderDietaryFilters() {
   els.dietaryFilters.innerHTML = FOOD_MAP_DATA.dietaryFilters
     .map((filter) => {
       const isActive = state.dietaryAvoids.includes(filter.id);
-      return `<button class="${isActive ? "is-active" : ""}" data-dietary="${filter.id}" type="button" title="${filter.note}" aria-pressed="${isActive}">${filter.label}</button>`;
+      const modeClass = filter.mode === "require" ? "is-preference" : "";
+      return `<button class="${modeClass} ${isActive ? "is-active" : ""}" data-dietary="${filter.id}" type="button" title="${filter.note}" aria-pressed="${isActive}">${filter.label}</button>`;
     })
     .join("");
 
@@ -1154,7 +1170,7 @@ function renderRestaurantCard(restaurant) {
         ${orderedDishes
           .map(
             ({ dish, index }) => {
-              const hasConflict = dishHasAvoidedTag(dish);
+              const hasConflict = dishHasDietaryConflict(dish);
               return `
               <button class="dish-button ${dish.province === currentProvince().name ? "is-relevant" : ""} ${hasConflict ? "has-dietary-conflict" : ""}" type="button" data-restaurant="${restaurant.id}" data-dish-index="${index}" ${hasConflict ? "disabled" : ""}>
                 ${dishThumbnailMarkup(dish)}

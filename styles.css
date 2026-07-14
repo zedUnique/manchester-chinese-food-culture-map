@@ -948,6 +948,16 @@ h2 {
   color: #fff;
 }
 
+.classification-note {
+  margin: 10px 0 0;
+  padding-top: 9px;
+  border-top: 1px solid #e7ecef;
+  color: #667785;
+  font-size: 10.5px;
+  font-weight: 650;
+  line-height: 1.5;
+}
+
 .dietary-filter-panel {
   border-left: 4px solid #a9cfea;
   background: #f8fbfe;
@@ -958,7 +968,14 @@ h2 {
   background: #fff;
 }
 
-.dietary-chips button.is-active {
+.dietary-chips button.is-preference {
+  border-color: #bcdcf2;
+  background: #eef7fd;
+  color: #245f88;
+}
+
+.dietary-chips button.is-active,
+.dietary-chips button.is-preference.is-active {
   border-color: var(--accent-strong);
   background: var(--accent-strong);
   color: #fff;
@@ -1243,6 +1260,11 @@ h2 {
 .dietary-mini span.is-warning {
   background: #ffe5df;
   color: #a33220;
+}
+
+.dietary-mini span.is-match {
+  background: #e3f2fc;
+  color: #245f88;
 }
 
 .dietary-note {

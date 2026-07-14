@@ -14,7 +14,7 @@
     />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
-    <link rel="stylesheet" href="./styles.css?v=20260714-academic-disclaimer" />
+    <link rel="stylesheet" href="./styles.css?v=20260714-regional-taxonomy-vegetarian" />
   </head>
   <body>
     <div class="app-shell">
@@ -109,21 +109,22 @@
             <section class="culture-column" aria-label="Selected regional cuisine and filters">
               <div class="province-story" id="provinceStory" aria-live="polite"></div>
 
-              <div class="filter-panel" aria-label="Cultural category filter">
+              <div class="filter-panel" aria-label="Regional food tradition filter">
                 <div class="filter-heading">
-                  <span>Cultural category</span>
+                  <span>Regional food tradition</span>
                   <button id="clearCuisineButton" type="button">All</button>
                 </div>
                 <div class="filter-chips" id="cuisineFilters"></div>
+                <p class="classification-note">Classified by evidenced culinary provenance: menu, restaurant self-description or fieldwork. Restaurants may carry more than one regional label; dish formats such as hotpot and malatang are not treated as regions.</p>
               </div>
 
-              <div class="filter-panel dietary-filter-panel" aria-label="Dietary caution filter">
+              <div class="filter-panel dietary-filter-panel" aria-label="Dietary needs filter">
                 <div class="filter-heading">
-                  <span>Dietary caution</span>
+                  <span>Dietary needs</span>
                   <button id="clearDietaryButton" type="button">Clear</button>
                 </div>
                 <div class="filter-chips dietary-chips" id="dietaryFilters"></div>
-                <p class="dietary-filter-note">Recorded risks only. Always confirm allergens, stock, cooking wine, halal status and cross-contact with the restaurant.</p>
+                <p class="dietary-filter-note">Recorded risks and explicitly identified vegetarian options only. Always confirm allergens, meat or seafood stock, cooking wine, halal status and cross-contact with the restaurant.</p>
               </div>
 
               <div class="legend" id="mapLegend"></div>
@@ -169,7 +170,7 @@
       crossorigin=""
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
-    <script src="./data.js?v=20260714-chinese-image-audit"></script>
-    <script src="./app.js?v=20260714-chinese-image-audit"></script>
+    <script src="./data.js?v=20260714-regional-taxonomy-vegetarian"></script>
+    <script src="./app.js?v=20260714-regional-taxonomy-vegetarian"></script>
   </body>
 </html>

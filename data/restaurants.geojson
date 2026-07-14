@@ -1,7 +1,7 @@
 {
   "type": "FeatureCollection",
   "name": "Manchester Chinese Food Culture POIs",
-  "generatedAt": "2026-07-14T15:46:12.697Z",
+  "generatedAt": "2026-07-14T21:13:08.380Z",
   "features": [
     {
       "type": "Feature",
@@ -61,8 +61,8 @@
           "云南"
         ],
         "cuisine_categories": [
-          "Hotpot / 火锅",
-          "Noodles & Rice / 米面主食"
+          "Sichuan-Chongqing / 川渝",
+          "Yunnan / 云南"
         ],
         "signature_dishes": [
           "个人小火锅",
@@ -96,8 +96,7 @@
           "香港"
         ],
         "cuisine_categories": [
-          "Cantonese / 粤菜",
-          "Family Memory / 家族记忆"
+          "Cantonese / 粤菜"
         ],
         "signature_dishes": [
           "三拼烧味饭",
@@ -130,8 +129,7 @@
           "广东"
         ],
         "cuisine_categories": [
-          "Cantonese / 粤菜",
-          "Family Memory / 家族记忆"
+          "Cantonese / 粤菜"
         ],
         "signature_dishes": [
           "Lily Kwok's Chicken Curry",
@@ -166,7 +164,6 @@
         ],
         "cuisine_categories": [
           "Cantonese / 粤菜",
-          "Family Memory / 家族记忆",
           "Beijing / 京菜"
         ],
         "signature_dishes": [
@@ -200,8 +197,7 @@
           "香港"
         ],
         "cuisine_categories": [
-          "Cantonese / 粤菜",
-          "Family Memory / 家族记忆"
+          "Cantonese / 粤菜"
         ],
         "signature_dishes": [
           "虾饺烧卖",
@@ -234,8 +230,7 @@
           "香港"
         ],
         "cuisine_categories": [
-          "Cantonese / 粤菜",
-          "Family Memory / 家族记忆"
+          "Cantonese / 粤菜"
         ],
         "signature_dishes": [
           "家常点心篮",
@@ -268,8 +263,7 @@
           "香港"
         ],
         "cuisine_categories": [
-          "Cantonese / 粤菜",
-          "Family Memory / 家族记忆"
+          "Cantonese / 粤菜"
         ],
         "signature_dishes": [
           "粤式烧鸭",
@@ -334,8 +328,7 @@
           "川渝"
         ],
         "cuisine_categories": [
-          "Sichuan-Chongqing / 川渝",
-          "Noodles & Rice / 米面主食"
+          "Sichuan-Chongqing / 川渝"
         ],
         "signature_dishes": [
           "重庆小面",
@@ -436,8 +429,7 @@
         ],
         "cuisine_categories": [
           "Cantonese / 粤菜",
-          "Hunan / 湘菜",
-          "Family Memory / 家族记忆"
+          "Hunan / 湘菜"
         ],
         "signature_dishes": [
           "椒盐豆腐",
@@ -471,9 +463,8 @@
           "川味源流"
         ],
         "cuisine_categories": [
-          "Malatang / 麻辣烫",
           "Northeast / 东北",
-          "Hotpot / 火锅"
+          "Sichuan-Chongqing / 川渝"
         ],
         "signature_dishes": [
           "杨国福菌菇汤麻辣烫",
@@ -540,8 +531,7 @@
           "川渝"
         ],
         "cuisine_categories": [
-          "Sichuan-Chongqing / 川渝",
-          "Noodles & Rice / 米面主食"
+          "Sichuan-Chongqing / 川渝"
         ],
         "signature_dishes": [
           "夫妻肺片",
@@ -575,8 +565,7 @@
           "川渝"
         ],
         "cuisine_categories": [
-          "Sichuan-Chongqing / 川渝",
-          "Noodles & Rice / 米面主食"
+          "Sichuan-Chongqing / 川渝"
         ],
         "signature_dishes": [
           "跷脚牛肉",
@@ -609,8 +598,7 @@
           "川渝"
         ],
         "cuisine_categories": [
-          "Sichuan-Chongqing / 川渝",
-          "Hotpot / 火锅"
+          "Sichuan-Chongqing / 川渝"
         ],
         "signature_dishes": [
           "重庆风味麻辣锅",
@@ -644,8 +632,7 @@
           "川渝"
         ],
         "cuisine_categories": [
-          "Sichuan-Chongqing / 川渝",
-          "Hotpot / 火锅"
+          "Sichuan-Chongqing / 川渝"
         ],
         "signature_dishes": [
           "麻辣鸳鸯锅",
@@ -680,8 +667,7 @@
           "香港"
         ],
         "cuisine_categories": [
-          "Cantonese / 粤菜",
-          "Family Memory / 家族记忆"
+          "Cantonese / 粤菜"
         ],
         "signature_dishes": [
           "红米肠与虾饺",
@@ -715,9 +701,7 @@
           "香港"
         ],
         "cuisine_categories": [
-          "Cantonese / 粤菜",
-          "Family Memory / 家族记忆",
-          "Hotpot / 火锅"
+          "Cantonese / 粤菜"
         ],
         "signature_dishes": [
           "干炒牛河",
@@ -750,8 +734,7 @@
           "香港"
         ],
         "cuisine_categories": [
-          "Cantonese / 粤菜",
-          "Family Memory / 家族记忆"
+          "Cantonese / 粤菜"
         ],
         "signature_dishes": [
           "早茶点心",
@@ -786,8 +769,7 @@
           "潮汕"
         ],
         "cuisine_categories": [
-          "Cantonese / 粤菜",
-          "Hotpot / 火锅"
+          "Cantonese / 粤菜"
         ],
         "signature_dishes": [
           "潮汕牛肉火锅",
@@ -853,8 +835,7 @@
           "香港"
         ],
         "cuisine_categories": [
-          "Cantonese / 粤菜",
-          "Family Memory / 家族记忆"
+          "Cantonese / 粤菜"
         ],
         "signature_dishes": [
           "现代点心",
@@ -887,7 +868,7 @@
           "陕西"
         ],
         "cuisine_categories": [
-          "Noodles & Rice / 米面主食"
+          "Shaanxi / 陕西"
         ],
         "signature_dishes": [
           "牛肉汤面",
@@ -920,8 +901,7 @@
           "香港"
         ],
         "cuisine_categories": [
-          "Cantonese / 粤菜",
-          "Family Memory / 家族记忆"
+          "Cantonese / 粤菜"
         ],
         "signature_dishes": [
           "宫保豆腐",
