@@ -1,8 +1,8 @@
 # Research-Led Regional Foodway Framework
 
-## Status of the 12 Entries
+## Status of the 13 Entries
 
-The map does not claim that China has an official set of twelve cuisines. Its twelve markers are a curated analytical sample designed for this project's research question: how can Manchester Chinese restaurants help non-Chinese users understand the regional, historical and social diversity behind Chinese food?
+The map does not claim that China has an official set of thirteen cuisines. Its thirteen markers are a curated analytical sample designed for this project's research question: how can Manchester Chinese restaurants help non-Chinese users understand the regional, historical and social diversity behind Chinese food?
 
 The framework combines three ideas:
 
@@ -23,7 +23,7 @@ An entry is retained when it meets at least one of the following criteria:
 
 Adjacent traditions are merged only where the literature supports continuity and the combined entry improves communication. Restaurant labels are kept as a separate evidence layer and may overlap because a single Manchester restaurant can serve food from several regions.
 
-## The 12 Project Entries
+## The 13 Project Entries
 
 | Project entry | Academic anchor | Project adaptation |
 | --- | --- | --- |
@@ -32,6 +32,7 @@ Adjacent traditions are merged only where the literature supports continuity and
 | Guangdong-Cantonese | Yue | Retained because Cantonese food is central to overseas Chinese restaurant history and Manchester Chinatown. |
 | Hong Kong foodways | HK | Kept separate from Yue as an urban and migration-focused entry. Zhu et al. also analyse Hong Kong separately; the project focuses on cha chaan teng, roast-meat and diasporic food memory. |
 | Jiangsu-Zhejiang | Su and Zhe | Merged for this interface because later regional-cuisine research notes substantial similarity between Jiangsu and Zhejiang. Huaiyang and Jiangnan remain explanatory cultural terms within the entry. |
+| Anhui | Hui | Retained so that the framework does not omit one of the canonical Eight Great Cuisines. With no verified Manchester POI, it is shown as a cultural reference and explicit fieldwork gap. |
 | Fujian | Min | Retained for mountain-coastal ecology, soup traditions and maritime migration, even though a verified Manchester POI is not yet recorded. |
 | Hunan | Xiang | Retained to distinguish fresh and sour chilli traditions from Sichuan-Chongqing mala. |
 | Beijing | Jing | Retained because city-level culinary identities can be culturally meaningful and because Beijing dishes are evidenced on Manchester menus. |
@@ -52,11 +53,11 @@ Guo Cheng's dissertation is also used as a local methodological warning: cultura
 
 ## Dissertation-Ready Rationale
 
-This project does not reproduce the Eight Great Cuisines as a closed taxonomy, nor does it propose an official twelve-cuisine system. Instead, it uses twelve research-led regional foodway entries as an interpretive interface. The entries are adapted primarily from the broader regional categories analysed by Zhu et al. (2013), then narrowed or merged according to documented culinary continuity, Manchester restaurant evidence and the needs of non-Chinese users. The canonical traditions remain visible, while Beijing, Northeast, Hong Kong, Northwest, Xinjiang and Yunnan-Guizhou are retained because they communicate urban, ethnic, environmental and migratory dimensions that an Eight Cuisines interface would omit. Restaurant labels form a separate, overlapping evidence layer and are assigned only through menus, restaurant self-description, public records or fieldwork. The resulting framework is therefore a transparent cultural-mapping method rather than a claim that China has one fixed or universally accepted set of twelve cuisines.
+This project does not reproduce the Eight Great Cuisines as a closed taxonomy, nor does it propose an official thirteen-cuisine system. Instead, it uses thirteen research-led regional foodway entries as an interpretive interface. Every canonical Eight Great Cuisine tradition remains visible, although Jiangsu and Zhejiang are combined as a clearly labelled Su-Zhe entry. The framework then adds Beijing, Northeast, Hong Kong, Northwest, Xinjiang and Yunnan-Guizhou because they communicate urban, ethnic, environmental and migratory dimensions that an Eight Cuisines interface would omit. The entries are adapted primarily from the broader regional categories analysed by Zhu et al. (2013), then narrowed or merged according to documented culinary continuity, Manchester restaurant evidence and the needs of non-Chinese users. Restaurant labels form a separate, overlapping evidence layer and are assigned only through menus, restaurant self-description, public records or fieldwork. The resulting framework is therefore a transparent cultural-mapping method rather than a claim that China has one fixed or universally accepted set of thirteen cuisines.
 
 ## Limitations
 
-- The twelve entries are a selected interface, not a complete account of Chinese food culture.
+- The thirteen entries are a selected interface, not a complete account of Chinese food culture.
 - Current Manchester representation is uneven and reflects the available restaurant evidence.
 - Northwest and Yunnan-Guizhou currently use Shaanxi-led and Yunnan-led content respectively.
 - Restaurant menus can be multi-regional, adapted to local markets and subject to change.

@@ -1,8 +1,8 @@
 const FOOD_MAP_DATA = {
   defaultProvince: "chuanyu",
   regionalFramework: {
-    title: "12 research-led regional foodway entries",
-    shortLabel: "12 research-led entries",
+    title: "13 research-led regional foodway entries",
+    shortLabel: "13 research-led entries",
     note: "A research-led analytical sample for cultural exploration, not an official or exhaustive division of Chinese cuisine.",
     basis: "The entries adapt regional-cuisine groupings used by Zhu et al. (2013) and later culinary-regionalism research. Adjacent traditions are merged where the literature supports strong continuity, while Hong Kong, Xinjiang, Northeast and other foodways remain visible because the project explains migration, place and culture through Manchester restaurants."
   },
@@ -26,6 +26,7 @@ const FOOD_MAP_DATA = {
     { id: "hongkong", label: "HK / Hong Kong foodways", provinceIds: ["hongkong"], color: "#366fae" },
     { id: "shandong", label: "Lu / Shandong", provinceIds: ["shandong"], color: "#3f7194" },
     { id: "huaiyang", label: "Su-Zhe / Jiangsu-Zhejiang", provinceIds: ["jiangnan"], color: "#7c5fa1" },
+    { id: "anhui", label: "Hui / Anhui", provinceIds: ["anhui"], color: "#6f7651" },
     { id: "hunan", label: "Xiang / Hunan", provinceIds: ["hunan"], color: "#a83e3a" },
     { id: "fujian", label: "Min / Fujian", provinceIds: ["fujian"], color: "#2f7e71" },
     { id: "xinjiang", label: "Xinjiang foodways", provinceIds: ["xinjiang"], color: "#a65f18" },
@@ -275,6 +276,38 @@ const FOOD_MAP_DATA = {
           englishName: "Yangzhou Fried Rice",
           tags: ["rice", "wok control", "many ingredients"],
           story: "Yangzhou fried rice is internationally familiar and can introduce Huaiyang-Jiangnan ideas of ingredient separation, colour and controlled heat."
+        }
+      ]
+    },
+    {
+      id: "anhui",
+      name: "安徽",
+      markerEnglishName: "Hui",
+      englishName: "Anhui",
+      x: 434,
+      y: 240,
+      color: "#6f7651",
+      summary: "Anhui, or Hui cuisine, is retained because it is one of the canonical Eight Great Cuisines and would otherwise be missing from the framework. Its food culture is strongly associated with the mountain landscapes and preserved ingredients of historic Huizhou: bamboo shoots, wild and cultivated plants, fermentation, braising and careful use of fire. No verified Manchester restaurant point is currently recorded, so this entry clearly separates cultural reference material from future fieldwork evidence.",
+      foodTraits: ["Huizhou mountain ingredients", "Fermentation, braising and preserved foods", "Bamboo shoots, tea country and seasonal plants"],
+      restaurantIds: [],
+      representativeDishes: [
+        {
+          name: "臭鳜鱼",
+          englishName: "Fermented Mandarin Fish",
+          tags: ["fermented fish", "Huizhou", "braised"],
+          dietary: ["seafood", "soy"],
+          method: "Mandarin fish is lightly fermented until it develops its characteristic aroma, then rinsed and braised with aromatics and savoury seasonings.",
+          taste: "The aroma is assertive, but the cooked flesh is tender and deeply savoury rather than simply unpleasant or rotten.",
+          story: "The dish helps non-Chinese users distinguish controlled fermentation from spoilage. It connects preservation, transport and acquired taste to the mountain geography of historic Huizhou."
+        },
+        {
+          name: "徽州毛豆腐",
+          englishName: "Huizhou Fermented Hairy Tofu",
+          tags: ["fermented tofu", "street food", "Huizhou"],
+          dietary: ["vegetarian", "soy"],
+          method: "Tofu is fermented until a fine edible mycelium forms on the surface, then pan-fried or braised and served with chilli or savoury sauce.",
+          taste: "Crisp or browned outside, soft inside and rich in fermented umami, with an aroma that is stronger than fresh tofu.",
+          story: "Hairy tofu is a useful cultural lesson in how microbes, local climate and craft knowledge transform an ordinary soybean food into a regional identity marker. Restaurant recipes may not be vegetarian, so stock and sauce still require confirmation."
         }
       ]
     },
@@ -1656,12 +1689,12 @@ const FOOD_MAP_DATA = {
       text: "Diya Chutani's CommunityBites project informs the food-place POI framing, accessibility focus, map-based discovery and evaluation structure. Guo Cheng's Manchester Cultural Tour informs cultural classification, restaurant POI filtering and Web GIS architecture. Zhaolin Fang's historical mapping project informs the narrative information panel and map-linked exploration pattern."
     },
     {
-      title: "12-Entry Regional Foodway Framework",
-      text: "The China map is a research-led analytical sample, not an official or exhaustive twelve-cuisine division. It adapts regional types in Zhu et al. (2013): Chuan, Lu, Yue, Su-Zhe, Min, Xiang, Jing, Dongbei, Hong Kong, Xibei, Xinjiang and Yungui. Sichuan and Chongqing are presented together; Jiangsu and Zhejiang are merged because later research notes substantial continuity; Northwest and Yunnan-Guizhou are currently Shaanxi-led and Yunnan-led because those are the strongest documented entry points in this Manchester prototype."
+      title: "13-Entry Regional Foodway Framework",
+      text: "The China map is a research-led analytical sample, not an official or exhaustive thirteen-cuisine division. It keeps all canonical Eight Great Cuisine traditions visible, merging only the closely connected Su and Zhe entries for this interface, and adapts broader regional types in Zhu et al. (2013): Chuan, Lu, Yue, Su-Zhe, Hui, Min, Xiang, Jing, Dongbei, Hong Kong, Xibei, Xinjiang and Yungui. Northwest and Yunnan-Guizhou are currently Shaanxi-led and Yunnan-led because those are the strongest documented entry points in this Manchester prototype."
     },
     {
       title: "Manchester Restaurant Evidence Layer",
-      text: "The restaurant filter is a second analytical layer and does not redefine the twelve map entries. A Manchester restaurant receives one or more regional labels only when its menu, self-description, public evidence or fieldwork links it to those traditions. Labels may overlap because one restaurant can serve several regional foodways. Hotpot, malatang and noodles remain dish or dining formats, while family memory remains a narrative theme rather than a region."
+      text: "The restaurant filter is a second analytical layer and does not redefine the thirteen map entries. A Manchester restaurant receives one or more regional labels only when its menu, self-description, public evidence or fieldwork links it to those traditions. Labels may overlap because one restaurant can serve several regional foodways. Hotpot, malatang and noodles remain dish or dining formats, while family memory remains a narrative theme rather than a region."
     },
     {
       title: "Data Model",

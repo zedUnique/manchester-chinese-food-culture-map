@@ -50,8 +50,8 @@ for (const duplicate of new Set(duplicates(restaurantIds))) {
   errors.push(`Duplicate restaurant id: ${duplicate}`);
 }
 
-if (data.provinces.length !== 12) {
-  errors.push(`Regional framework should expose 12 entries, found ${data.provinces.length}`);
+if (data.provinces.length !== 13) {
+  errors.push(`Regional framework should expose 13 entries, found ${data.provinces.length}`);
 }
 
 for (const province of data.provinces) {

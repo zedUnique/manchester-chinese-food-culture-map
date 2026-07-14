@@ -13,10 +13,10 @@ This project should be framed as a Web GIS-based cultural mapping application, n
 ## Current Prototype Structure
 
 - Chinese province entry point: users start from a regional food culture perspective.
-- The China map uses twelve research-led regional foodway entries rather than claiming an official twelve-cuisine division. The framework adapts categories used by Zhu et al. (2013), then merges or narrows them for Manchester evidence and communication with non-Chinese users.
+- The China map uses thirteen research-led regional foodway entries rather than claiming an official thirteen-cuisine division. It keeps all traditions in the canonical Eight Great Cuisines visible, then adds city, ethnic and macro-regional foodways needed for Manchester evidence and communication with non-Chinese users.
 - Sichuan and Chongqing are merged because the Chuan category covers both locations in the academic source. Jiangsu-Zhejiang, Northwest and Yunnan-Guizhou are presented with explicit scope notes rather than as exact administrative units.
 - Manchester map: related restaurants are displayed as cultural POIs.
-- Restaurant regional evidence: filters use menu, restaurant self-description, public records or fieldwork. They form a separate layer from the twelve map entries and may overlap when one restaurant represents several food traditions.
+- Restaurant regional evidence: filters use menu, restaurant self-description, public records or fieldwork. They form a separate layer from the thirteen map entries and may overlap when one restaurant represents several food traditions.
 - Dish formats such as hotpot, malatang and noodles are not treated as regional categories; family memory remains a narrative theme.
 - Story panel: signature dishes are explained through method, taste and cultural background.
 - Data model: restaurant POIs are represented both in `data.js` and `data/restaurants.geojson`.
