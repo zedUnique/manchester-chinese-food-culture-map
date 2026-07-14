@@ -4,6 +4,12 @@
 
 项目定位是 Web GIS-based cultural mapping application，而不是普通餐馆推荐网站。
 
+## 在线访问
+
+公开演示地址：<https://zedunique.github.io/manchester-chinese-food-culture-map/>
+
+本网站是学生学术项目，并非曼彻斯特大学官方网站。
+
 ## 启动与关闭
 
 在项目文件夹中运行：
