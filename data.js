@@ -2,8 +2,8 @@ const FOOD_MAP_DATA = {
   defaultProvince: "chuanyu",
   regionalFramework: {
     title: "13 research-led regional foodway entries",
-    shortLabel: "13 research-led entries",
-    note: "A research-led analytical sample for cultural exploration, not an official or exhaustive division of Chinese cuisine.",
+    shortLabel: "13 entries",
+    note: "A research-led cultural framework, not an official cuisine division.",
     basis: "The entries adapt regional-cuisine groupings used by Zhu et al. (2013) and later culinary-regionalism research. Adjacent traditions are merged where the literature supports strong continuity, while Hong Kong, Xinjiang, Northeast and other foodways remain visible because the project explains migration, place and culture through Manchester restaurants."
   },
   dietaryFilters: [
