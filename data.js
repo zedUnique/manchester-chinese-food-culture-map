@@ -1,5 +1,11 @@
 const FOOD_MAP_DATA = {
   defaultProvince: "chuanyu",
+  regionalFramework: {
+    title: "12 research-led regional foodway entries",
+    shortLabel: "12 research-led entries",
+    note: "A research-led analytical sample for cultural exploration, not an official or exhaustive division of Chinese cuisine.",
+    basis: "The entries adapt regional-cuisine groupings used by Zhu et al. (2013) and later culinary-regionalism research. Adjacent traditions are merged where the literature supports strong continuity, while Hong Kong, Xinjiang, Northeast and other foodways remain visible because the project explains migration, place and culture through Manchester restaurants."
+  },
   dietaryFilters: [
     { id: "vegetarian", label: "Vegetarian options", mode: "require", note: "Shows restaurants with at least one dish explicitly recorded as vegetarian. Confirm stocks, sauces and shared cooking equipment directly." },
     { id: "pork", label: "Avoid pork", note: "Useful for Muslim diners and users who do not eat pork." },
@@ -14,17 +20,18 @@ const FOOD_MAP_DATA = {
     { id: "poultry", label: "Avoid poultry", note: "Covers chicken, duck and poultry-based dishes where recorded." }
   ],
   cuisineCategories: [
-    { id: "chuanyu", label: "Sichuan-Chongqing / 川渝", provinceIds: ["chuanyu"], color: "#c93f31" },
-    { id: "beijing", label: "Beijing / 京菜", provinceIds: ["beijing"], color: "#97610e" },
-    { id: "cantonese", label: "Cantonese / 粤菜", provinceIds: ["guangdong", "hongkong"], color: "#1f796a" },
-    { id: "shandong", label: "Shandong / 鲁菜", provinceIds: ["shandong"], color: "#3f7194" },
-    { id: "huaiyang", label: "Huaiyang-Jiangnan / 淮扬江南", provinceIds: ["jiangnan"], color: "#7c5fa1" },
-    { id: "hunan", label: "Hunan / 湘菜", provinceIds: ["hunan"], color: "#a83e3a" },
-    { id: "fujian", label: "Fujian / 闽菜", provinceIds: ["fujian"], color: "#2f7e71" },
-    { id: "xinjiang", label: "Xinjiang / 新疆", provinceIds: ["xinjiang"], color: "#a65f18" },
-    { id: "shaanxi", label: "Shaanxi / 陕西", provinceIds: ["shaanxi"], color: "#8a6540" },
-    { id: "dongbei", label: "Northeast / 东北", provinceIds: ["dongbei"], color: "#506a82" },
-    { id: "yunnan", label: "Yunnan / 云南", provinceIds: ["yunnan"], color: "#6d8d62" }
+    { id: "chuanyu", label: "Chuan / Sichuan-Chongqing", provinceIds: ["chuanyu"], color: "#c93f31" },
+    { id: "beijing", label: "Jing / Beijing", provinceIds: ["beijing"], color: "#97610e" },
+    { id: "cantonese", label: "Yue / Cantonese", provinceIds: ["guangdong"], color: "#1f796a" },
+    { id: "hongkong", label: "HK / Hong Kong foodways", provinceIds: ["hongkong"], color: "#366fae" },
+    { id: "shandong", label: "Lu / Shandong", provinceIds: ["shandong"], color: "#3f7194" },
+    { id: "huaiyang", label: "Su-Zhe / Jiangsu-Zhejiang", provinceIds: ["jiangnan"], color: "#7c5fa1" },
+    { id: "hunan", label: "Xiang / Hunan", provinceIds: ["hunan"], color: "#a83e3a" },
+    { id: "fujian", label: "Min / Fujian", provinceIds: ["fujian"], color: "#2f7e71" },
+    { id: "xinjiang", label: "Xinjiang foodways", provinceIds: ["xinjiang"], color: "#a65f18" },
+    { id: "shaanxi", label: "Xibei / Northwest", provinceIds: ["shaanxi"], color: "#8a6540" },
+    { id: "dongbei", label: "Dongbei / Northeast", provinceIds: ["dongbei"], color: "#506a82" },
+    { id: "yunnan", label: "Yungui / Yunnan-Guizhou", provinceIds: ["yunnan"], color: "#6d8d62" }
   ],
   provinces: [
     {
@@ -76,7 +83,7 @@ const FOOD_MAP_DATA = {
       color: "#c93f31",
       summary: "Sichuan and Chongqing are closely connected in food culture: Chongqing was historically part of Sichuan, and both are strongly associated with mala, the numbing-spicy sensation created by Sichuan peppercorns and chillies. For non-Chinese users, this region is best introduced not simply as \"very spicy\", but as a cuisine of layered aromas, fermented chilli bean paste, red oil, hot pot, street snacks and highly social dining.",
       foodTraits: ["Mala: numbing + spicy", "Red oil, doubanjiang and peppercorn", "Hot pot as communal dining"],
-      restaurantIds: ["red-chilli", "one-plus", "noodle-alley", "spicy-city", "chuan-guoxiang", "no8-hotpot", "blue-eyed-panda", "lameizi", "chuan-yun-xuan", "hao-zai-lai", "xiongqi"],
+      restaurantIds: ["red-chilli", "one-plus", "noodle-alley", "spicy-city", "chuan-guoxiang", "no8-hotpot", "lameizi", "chuan-yun-xuan", "hao-zai-lai", "xiongqi"],
       representativeDishes: [
         {
           name: "麻婆豆腐",
@@ -95,11 +102,13 @@ const FOOD_MAP_DATA = {
     {
       id: "shaanxi",
       name: "陕西",
-      englishName: "Shaanxi",
+      mapName: "西北",
+      markerEnglishName: "Xibei",
+      englishName: "Northwest (Shaanxi focus)",
       x: 374,
       y: 225,
       color: "#8a6540",
-      summary: "Shaanxi food is a strong example of northern wheat culture: breads, hand-pulled noodles, lamb, vinegar and street snacks. It also helps connect food culture to Xi'an and Silk Road urban history.",
+      summary: "This Northwest entry uses Shaanxi and Xi'an as its current Manchester-facing focus while locating them within the wider Xibei food region used in regional-cuisine research. Wheat breads and noodles, lamb, vinegar, chilli oil and street snacks connect food culture to dryland agriculture, Muslim communities and Silk Road urban history. Gansu, Qinghai and Ningxia require further restaurant and fieldwork evidence in later versions.",
       foodTraits: ["Wheat noodles and breads", "Lamb paomo and street snacks", "Vinegar, chilli oil and hot oil aroma"],
       restaurantIds: ["mr-hong-beef-noodle"],
       representativeDishes: [
@@ -245,11 +254,13 @@ const FOOD_MAP_DATA = {
     {
       id: "jiangnan",
       name: "江南",
-      englishName: "Huaiyang-Jiangnan",
+      mapName: "苏浙",
+      markerEnglishName: "Su-Zhe",
+      englishName: "Jiangsu-Zhejiang foodways",
       x: 474,
       y: 252,
       color: "#7c5fa1",
-      summary: "Huaiyang-Jiangnan food is associated with refined knife work, clear and delicate flavours, river fish, mild sweetness and literati urban culture. It represents an eastern Chinese tradition of subtlety rather than intensity.",
+      summary: "This entry combines Jiangsu and Zhejiang foodways because culinary research notes substantial continuity between them, while retaining Huaiyang and Jiangnan as useful cultural explanations. Refined knife work, clear and delicate flavours, river and lake ingredients, mild sweetness and literati urban culture present an eastern Chinese tradition of subtlety rather than intensity.",
       foodTraits: ["Clear, delicate and mildly sweet", "River fish and refined knife work", "Huaiyang and Jiangnan urban culture"],
       restaurantIds: [],
       representativeDishes: [
@@ -295,11 +306,13 @@ const FOOD_MAP_DATA = {
     {
       id: "yunnan",
       name: "云南",
-      englishName: "Yunnan",
+      mapName: "云贵",
+      markerEnglishName: "Yungui",
+      englishName: "Yunnan-Guizhou (Yunnan focus)",
       x: 308,
       y: 312,
       color: "#4e7c48",
-      summary: "Yunnan food reflects mountainous landscapes, rice noodles, mushrooms, herbs, steam cooking and many ethnic food traditions. A dedicated Yunnan restaurant point has not yet been verified in central Manchester, so this region is treated as a future fieldwork direction. The demo still introduces representative dishes so non-Chinese users can recognise what may be missing from the current restaurant landscape.",
+      summary: "This Yunnan-Guizhou entry follows the Yungui grouping used in regional-cuisine research, while the current prototype is Yunnan-led because its representative dishes are more fully documented. Mountain landscapes, rice noodles, mushrooms, herbs, fermentation and many ethnic food traditions show how ecology and borderland exchange shape food. A dedicated Manchester restaurant point has not yet been verified, so Guizhou dishes and local restaurant evidence remain a documented fieldwork gap.",
       foodTraits: ["Rice noodles and hot broth rituals", "Mushrooms, herbs and mountain ingredients", "Borderland and multi-ethnic foodways"],
       restaurantIds: [],
       representativeDishes: [
@@ -466,7 +479,7 @@ const FOOD_MAP_DATA = {
       provinceLinks: ["广东", "香港"],
       map: { x: 295, y: 210, lat: 53.478, lng: -2.2407 },
       accent: "#1f9a87",
-      cuisineCategoryIds: ["cantonese"],
+      cuisineCategoryIds: ["cantonese", "hongkong"],
       dataConfidence: "Public reports and menu observations should be verified with a site visit or restaurant website before final report use.",
       description: "A Chinatown roast-meat case study. Public reporting connects its three-roast combination with the Haaland Special, making it a useful bridge between Manchester pop culture and Cantonese roast-meat meals.",
       sourceIds: ["happy-seasons"],
@@ -498,7 +511,7 @@ const FOOD_MAP_DATA = {
       provinceLinks: ["香港", "广东"],
       map: { x: 414, y: 142, lat: 53.4831, lng: -2.2361 },
       accent: "#2f6fba",
-      cuisineCategoryIds: ["cantonese"],
+      cuisineCategoryIds: ["cantonese", "hongkong"],
       dataConfidence: "Cultural narrative is suitable for dissertation framing, but menu details should be checked against current restaurant materials.",
       description: "A strong dissertation case because it links food, women's migration history, family memory and Manchester's Chinese community.",
       sourceIds: ["lily-kwok"],
@@ -530,7 +543,7 @@ const FOOD_MAP_DATA = {
       provinceLinks: ["广东", "香港", "北京"],
       map: { x: 218, y: 188, lat: 53.4778246, lng: -2.2409458 },
       accent: "#1f9a87",
-      cuisineCategoryIds: ["cantonese", "beijing"],
+      cuisineCategoryIds: ["cantonese", "hongkong", "beijing"],
       dataConfidence: "Added from OpenStreetMap public POI data; signature dishes are representative Cantonese/banquet examples and should be checked against the current menu.",
       description: "A long-running Chinatown dining point useful for explaining Cantonese banquet culture, dim sum and the way formal Chinese restaurants became part of Manchester city-centre food life.",
       sourceIds: ["osm-overpass"],
@@ -562,7 +575,7 @@ const FOOD_MAP_DATA = {
       provinceLinks: ["广东", "香港"],
       map: { x: 235, y: 179, lat: 53.4785971, lng: -2.2393628 },
       accent: "#1f9a87",
-      cuisineCategoryIds: ["cantonese"],
+      cuisineCategoryIds: ["cantonese", "hongkong"],
       dataConfidence: "Added from OpenStreetMap public POI data; dim sum examples should be checked against the current menu.",
       description: "A compact Chinatown point for showing how dim sum restaurants organise choice, sharing and Cantonese food memory in Manchester.",
       sourceIds: ["osm-overpass"],
@@ -594,7 +607,7 @@ const FOOD_MAP_DATA = {
       provinceLinks: ["广东", "香港"],
       map: { x: 230, y: 172, lat: 53.4791449, lng: -2.2399014 },
       accent: "#1f9a87",
-      cuisineCategoryIds: ["cantonese"],
+      cuisineCategoryIds: ["cantonese", "hongkong"],
       dataConfidence: "Added from OpenStreetMap public POI data; dish wording is representative and should be verified with the current menu.",
       description: "A Cantonese Chinatown restaurant point useful for explaining how smaller family-style venues sit alongside larger banquet restaurants.",
       sourceIds: ["osm-overpass"],
@@ -626,7 +639,7 @@ const FOOD_MAP_DATA = {
       provinceLinks: ["广东", "香港"],
       map: { x: 151, y: 166, lat: 53.4796671, lng: -2.2467274 },
       accent: "#1f9a87",
-      cuisineCategoryIds: ["cantonese"],
+      cuisineCategoryIds: ["cantonese", "hongkong"],
       dataConfidence: "Added from OpenStreetMap public POI data; the restaurant is used here as a city-centre Cantonese banquet-style POI.",
       description: "A central Manchester point for Cantonese banquet dining, useful for linking Chinese food culture to business meals, celebrations and formal dining.",
       sourceIds: ["osm-overpass"],
@@ -799,7 +812,7 @@ const FOOD_MAP_DATA = {
       provinceLinks: ["广东", "香港", "湖南"],
       map: { x: 347, y: 121, lat: 53.4835686, lng: -2.2291567 },
       accent: "#2f6fba",
-      cuisineCategoryIds: ["cantonese", "hunan"],
+      cuisineCategoryIds: ["cantonese", "hongkong", "hunan"],
       dataConfidence: "Official website confirms the address and lists a gluten-free menu; exact dish availability still needs current menu checks.",
       description: "An Ancoats Chinese restaurant useful for demonstrating accessibility features because its public website explicitly offers a gluten-free menu.",
       sourceIds: ["osm-overpass", "blue-eyed-panda"],
@@ -1035,7 +1048,7 @@ const FOOD_MAP_DATA = {
       provinceLinks: ["广东", "香港"],
       map: { x: 230, y: 181, lat: 53.4789, lng: -2.2401 },
       accent: "#1f9a87",
-      cuisineCategoryIds: ["cantonese"],
+      cuisineCategoryIds: ["cantonese", "hongkong"],
       dataConfidence: "Only Yu's official website lists its first- and second-floor restaurant at 58-60 George Street. Dish availability and opening hours should still be checked before a visit.",
       description: "A Cantonese community-recommended lead for dim sum, roast meats and Hong Kong-style comfort dishes.",
       sourceIds: ["onlyyu-official", "xiaohongshu-manchester-leads"],
@@ -1069,7 +1082,7 @@ const FOOD_MAP_DATA = {
       provinceLinks: ["广东", "香港"],
       map: { x: 226, y: 182, lat: 53.47865, lng: -2.2402 },
       accent: "#2f6fba",
-      cuisineCategoryIds: ["cantonese"],
+      cuisineCategoryIds: ["cantonese", "hongkong"],
       dataConfidence: "Xiaohongshu posts repeatedly mention 老地方 as a Chinatown Cantonese restaurant with dim sum, roast meats, hot pot or KTV/private-room context. Exact address should be confirmed.",
       description: "A Cantonese gathering-place lead for family meals, private-room social dining and late-night Chinatown culture.",
       sourceIds: ["xiaohongshu-manchester-leads"],
@@ -1103,7 +1116,7 @@ const FOOD_MAP_DATA = {
       provinceLinks: ["广东", "香港"],
       map: { x: 238, y: 296, lat: 53.4689, lng: -2.2393 },
       accent: "#1f9a87",
-      cuisineCategoryIds: ["cantonese"],
+      cuisineCategoryIds: ["cantonese", "hongkong"],
       dataConfidence: "Tai Wu's official booking page and the public Food Standards listing identify the restaurant at 81 Upper Brook Street. Individual dishes and service times should be rechecked before a visit.",
       description: "A Cantonese dim-sum and banquet-style lead useful for mapping student access to Cantonese food outside the Chinatown core.",
       sourceIds: ["taiwu-official", "taiwu-food-standards", "xiaohongshu-manchester-leads"],
@@ -1205,7 +1218,7 @@ const FOOD_MAP_DATA = {
       provinceLinks: ["广东", "香港"],
       map: { x: 80, y: 165, lat: 53.4797376, lng: -2.2532386 },
       accent: "#9a6fb0",
-      cuisineCategoryIds: ["cantonese"],
+      cuisineCategoryIds: ["cantonese", "hongkong"],
       dataConfidence: "Official website confirms the Manchester address and positions the restaurant as modern Chinese and Japanese cuisine; regional labels here are interpretive.",
       description: "A modern Chinese dining point for showing how Chinese food culture can become immersive, design-led and hybrid in contemporary Manchester.",
       sourceIds: ["osm-overpass", "tattu"],
@@ -1269,7 +1282,7 @@ const FOOD_MAP_DATA = {
       provinceLinks: ["广东", "香港"],
       map: { x: 237, y: 311, lat: 53.4671454, lng: -2.2391457 },
       accent: "#5b8c5a",
-      cuisineCategoryIds: ["cantonese"],
+      cuisineCategoryIds: ["cantonese", "hongkong"],
       dataConfidence: "Added from OpenStreetMap public POI data; vegetarian-friendly examples are representative and require menu checks.",
       description: "A university-area Chinese point useful for showing how vegetarian or lighter options can be surfaced for non-Chinese users.",
       sourceIds: ["osm-overpass"],
@@ -1313,6 +1326,18 @@ const FOOD_MAP_DATA = {
       label: "Swislocki (2020): Special Issue on Chinese Culinary Regionalism",
       url: "https://doi.org/10.1080/20549547.2020.1770490",
       note: "Used to recognise that Chinese food identities can be organised by province, city and ethnic region, and that the canonical four- or eight-cuisine lists do not cover every tradition represented in this project."
+    },
+    {
+      id: "regional-differentiation-chen-1994",
+      label: "Chen Chuankang (1994): The Culture of Chinese Diet: Regional Differentiation and Developing Trends",
+      url: "https://www.geog.com.cn/CN/10.11821/xb199403004",
+      note: "Provides a Chinese cultural-geography basis for treating foods, dishes and dietary culture as regional geographical phenomena rather than a single fixed cuisine list."
+    },
+    {
+      id: "food-culture-poi-regionalization-2021",
+      label: "Jiang et al. (2021): Using Restaurant POI Data to Explore Regional Structure of Food Culture Based on Cuisine Preference",
+      url: "https://doi.org/10.3390/ijgi10010038",
+      note: "Supports restaurant POIs and cultural regionalization as useful analytical methods, while showing that a regional structure depends on the selected data, categories and method."
     },
     {
       id: "fsa-allergy-guidance",
@@ -1631,8 +1656,12 @@ const FOOD_MAP_DATA = {
       text: "Diya Chutani's CommunityBites project informs the food-place POI framing, accessibility focus, map-based discovery and evaluation structure. Guo Cheng's Manchester Cultural Tour informs cultural classification, restaurant POI filtering and Web GIS architecture. Zhaolin Fang's historical mapping project informs the narrative information panel and map-linked exploration pattern."
     },
     {
-      title: "Classification Basis",
-      text: "The filter uses a provenance-first regional taxonomy. A restaurant receives one or more regional labels only when its menu, self-description, public evidence or fieldwork links it to those food traditions. This follows regional-cuisine research by Zhu et al. (2013), Zhang and Ma (2020), and Swislocki (2020), while also responding to Guo Cheng's warning that cultural categories at different scales should not be mixed. Hotpot, malatang and noodles are therefore treated as dish or dining formats, not as regions; family memory remains a narrative theme rather than a cuisine category."
+      title: "12-Entry Regional Foodway Framework",
+      text: "The China map is a research-led analytical sample, not an official or exhaustive twelve-cuisine division. It adapts regional types in Zhu et al. (2013): Chuan, Lu, Yue, Su-Zhe, Min, Xiang, Jing, Dongbei, Hong Kong, Xibei, Xinjiang and Yungui. Sichuan and Chongqing are presented together; Jiangsu and Zhejiang are merged because later research notes substantial continuity; Northwest and Yunnan-Guizhou are currently Shaanxi-led and Yunnan-led because those are the strongest documented entry points in this Manchester prototype."
+    },
+    {
+      title: "Manchester Restaurant Evidence Layer",
+      text: "The restaurant filter is a second analytical layer and does not redefine the twelve map entries. A Manchester restaurant receives one or more regional labels only when its menu, self-description, public evidence or fieldwork links it to those traditions. Labels may overlap because one restaurant can serve several regional foodways. Hotpot, malatang and noodles remain dish or dining formats, while family memory remains a narrative theme rather than a region."
     },
     {
       title: "Data Model",
@@ -1640,7 +1669,7 @@ const FOOD_MAP_DATA = {
     },
     {
       title: "User Flow",
-      text: "The main interaction path is: select a Chinese province, view its cultural food traits, locate related Manchester restaurants, choose a restaurant, and then explore representative dishes through method, taste and cultural-story descriptions."
+      text: "The main interaction path is: select a Chinese regional foodway, view its cultural food traits, locate related Manchester restaurants, choose a restaurant, and then explore representative dishes through method, taste and cultural-story descriptions."
     },
     {
       title: "Evaluation Plan",

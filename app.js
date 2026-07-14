@@ -18,6 +18,7 @@ const els = {
   provinceButtons: document.querySelector("#provinceButtons"),
   provinceStory: document.querySelector("#provinceStory"),
   provinceCount: document.querySelector("#provinceCount"),
+  frameworkNote: document.querySelector("#frameworkNote"),
   restaurantMarkers: document.querySelector("#restaurantMarkers"),
   restaurantList: document.querySelector("#restaurantList"),
   storyPanel: document.querySelector("#storyPanel"),
@@ -852,8 +853,8 @@ function renderProvinceButtons() {
       return `
         <g class="province-node ${isActive ? "is-active" : ""}" data-province="${province.id}" tabindex="0" role="button" aria-label="Select ${provinceLabel(province)}">
           <circle cx="${province.x}" cy="${province.y}" r="${radius}" fill="${province.color}" />
-          <text class="province-name" x="${province.x}" y="${province.y - 2}" text-anchor="middle">${province.name}</text>
-          <text class="province-en" x="${province.x}" y="${province.y + 14}" text-anchor="middle">${province.englishName}</text>
+          <text class="province-name" x="${province.x}" y="${province.y - 2}" text-anchor="middle">${province.mapName || province.name}</text>
+          <text class="province-en" x="${province.x}" y="${province.y + 14}" text-anchor="middle">${province.markerEnglishName || province.englishName}</text>
         </g>
       `;
     })
@@ -883,13 +884,14 @@ function renderProvinceStory() {
     .slice(0, 3)
     .map((dish) => `<span>${dishLabel(dish)}</span>`)
     .join("");
-  els.provinceCount.textContent = `${FOOD_MAP_DATA.provinces.length} regional entries`;
+  els.provinceCount.textContent = FOOD_MAP_DATA.regionalFramework?.shortLabel || `${FOOD_MAP_DATA.provinces.length} research-led entries`;
+  els.frameworkNote.textContent = FOOD_MAP_DATA.regionalFramework?.note || "";
   els.routeLabel.textContent = `${provinceLabel(province)} → Manchester`;
   els.provinceStory.innerHTML = `
     <div class="story-card" style="--province-color: ${province.color}">
       <div class="story-title">
         <span>${provinceLabel(province)}</span>
-        <small>${province.name}</small>
+        <small>${province.mapName || province.name}</small>
       </div>
       <p>${province.summary}</p>
       <div class="trait-list">

@@ -14,7 +14,7 @@
     />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
-    <link rel="stylesheet" href="./styles.css?v=20260714-regional-taxonomy-vegetarian" />
+    <link rel="stylesheet" href="./styles.css?v=20260714-regional-foodways-framework" />
   </head>
   <body>
     <div class="app-shell">
@@ -52,16 +52,17 @@
         <section class="china-panel" aria-labelledby="china-title">
           <div class="panel-heading">
             <div>
-              <p class="eyebrow"><span>01</span> China food regions</p>
-              <h1 id="china-title">Start from a Chinese food region, then find its Manchester links</h1>
+              <p class="eyebrow"><span>01</span> China regional foodways</p>
+              <h1 id="china-title">Start from a Chinese regional foodway, then find its Manchester links</h1>
+              <p class="framework-note" id="frameworkNote"></p>
             </div>
             <span class="count-pill" id="provinceCount"></span>
           </div>
 
           <div class="china-map-wrap" id="province-map">
             <svg class="china-map" viewBox="0 0 660 430" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="mapTitle mapDesc">
-              <title id="mapTitle">Interactive China food-region map prototype</title>
-              <desc id="mapDesc">Select a regional marker to view food culture, Manchester restaurants and signature dishes.</desc>
+              <title id="mapTitle">Interactive China regional-foodway map prototype</title>
+              <desc id="mapDesc">Select one of twelve research-led foodway entries to view food culture, Manchester restaurants and signature dishes.</desc>
               <image class="china-boundary-image" href="./data/china-boundary.svg" width="660" height="430" />
               <g id="provinceButtons"></g>
             </svg>
@@ -109,13 +110,13 @@
             <section class="culture-column" aria-label="Selected regional cuisine and filters">
               <div class="province-story" id="provinceStory" aria-live="polite"></div>
 
-              <div class="filter-panel" aria-label="Regional food tradition filter">
+              <div class="filter-panel" aria-label="Manchester restaurant regional evidence filter">
                 <div class="filter-heading">
-                  <span>Regional food tradition</span>
+                  <span>Restaurant regional evidence</span>
                   <button id="clearCuisineButton" type="button">All</button>
                 </div>
                 <div class="filter-chips" id="cuisineFilters"></div>
-                <p class="classification-note">Classified by evidenced culinary provenance: menu, restaurant self-description or fieldwork. Restaurants may carry more than one regional label; dish formats such as hotpot and malatang are not treated as regions.</p>
+                <p class="classification-note">This filters Manchester restaurant evidence linked to the selected map entry; it does not redefine the 12-entry framework. Labels come from menus, restaurant self-description, public records or fieldwork and may overlap.</p>
               </div>
 
               <div class="filter-panel dietary-filter-panel" aria-label="Dietary needs filter">
@@ -170,7 +171,7 @@
       crossorigin=""
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
-    <script src="./data.js?v=20260714-regional-taxonomy-vegetarian"></script>
-    <script src="./app.js?v=20260714-regional-taxonomy-vegetarian"></script>
+    <script src="./data.js?v=20260714-regional-foodways-framework"></script>
+    <script src="./app.js?v=20260714-regional-foodways-framework"></script>
   </body>
 </html>

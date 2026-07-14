@@ -50,10 +50,24 @@ for (const duplicate of new Set(duplicates(restaurantIds))) {
   errors.push(`Duplicate restaurant id: ${duplicate}`);
 }
 
+if (data.provinces.length !== 12) {
+  errors.push(`Regional framework should expose 12 entries, found ${data.provinces.length}`);
+}
+
 for (const province of data.provinces) {
+  const directCategoryIds = data.cuisineCategories
+    .filter((category) => category.provinceIds.includes(province.id))
+    .map((category) => category.id);
+  if (!directCategoryIds.length) errors.push(`Province ${province.id} has no direct regional evidence category`);
+
   for (const restaurantId of province.restaurantIds) {
     if (!restaurantIds.includes(restaurantId)) {
       errors.push(`Province ${province.id} references missing restaurant ${restaurantId}`);
+      continue;
+    }
+    const restaurant = data.restaurants.find((item) => item.id === restaurantId);
+    if (!restaurant.cuisineCategoryIds.some((categoryId) => directCategoryIds.includes(categoryId))) {
+      errors.push(`Province ${province.id} references ${restaurantId} without matching regional evidence`);
     }
   }
 }

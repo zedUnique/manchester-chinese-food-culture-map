@@ -1,7 +1,7 @@
 {
   "type": "FeatureCollection",
   "name": "Manchester Chinese Food Culture POIs",
-  "generatedAt": "2026-07-14T21:13:08.380Z",
+  "generatedAt": "2026-07-14T21:38:14.890Z",
   "features": [
     {
       "type": "Feature",
@@ -21,8 +21,8 @@
           "北京"
         ],
         "cuisine_categories": [
-          "Sichuan-Chongqing / 川渝",
-          "Beijing / 京菜"
+          "Chuan / Sichuan-Chongqing",
+          "Jing / Beijing"
         ],
         "signature_dishes": [
           "北京烤鸭",
@@ -61,8 +61,8 @@
           "云南"
         ],
         "cuisine_categories": [
-          "Sichuan-Chongqing / 川渝",
-          "Yunnan / 云南"
+          "Chuan / Sichuan-Chongqing",
+          "Yungui / Yunnan-Guizhou"
         ],
         "signature_dishes": [
           "个人小火锅",
@@ -96,7 +96,8 @@
           "香港"
         ],
         "cuisine_categories": [
-          "Cantonese / 粤菜"
+          "Yue / Cantonese",
+          "HK / Hong Kong foodways"
         ],
         "signature_dishes": [
           "三拼烧味饭",
@@ -129,7 +130,8 @@
           "广东"
         ],
         "cuisine_categories": [
-          "Cantonese / 粤菜"
+          "Yue / Cantonese",
+          "HK / Hong Kong foodways"
         ],
         "signature_dishes": [
           "Lily Kwok's Chicken Curry",
@@ -163,8 +165,9 @@
           "北京"
         ],
         "cuisine_categories": [
-          "Cantonese / 粤菜",
-          "Beijing / 京菜"
+          "Yue / Cantonese",
+          "HK / Hong Kong foodways",
+          "Jing / Beijing"
         ],
         "signature_dishes": [
           "粤式点心拼盘",
@@ -197,7 +200,8 @@
           "香港"
         ],
         "cuisine_categories": [
-          "Cantonese / 粤菜"
+          "Yue / Cantonese",
+          "HK / Hong Kong foodways"
         ],
         "signature_dishes": [
           "虾饺烧卖",
@@ -230,7 +234,8 @@
           "香港"
         ],
         "cuisine_categories": [
-          "Cantonese / 粤菜"
+          "Yue / Cantonese",
+          "HK / Hong Kong foodways"
         ],
         "signature_dishes": [
           "家常点心篮",
@@ -263,7 +268,8 @@
           "香港"
         ],
         "cuisine_categories": [
-          "Cantonese / 粤菜"
+          "Yue / Cantonese",
+          "HK / Hong Kong foodways"
         ],
         "signature_dishes": [
           "粤式烧鸭",
@@ -295,7 +301,7 @@
           "湖南"
         ],
         "cuisine_categories": [
-          "Hunan / 湘菜"
+          "Xiang / Hunan"
         ],
         "signature_dishes": [
           "剁椒鱼",
@@ -328,7 +334,7 @@
           "川渝"
         ],
         "cuisine_categories": [
-          "Sichuan-Chongqing / 川渝"
+          "Chuan / Sichuan-Chongqing"
         ],
         "signature_dishes": [
           "重庆小面",
@@ -362,7 +368,7 @@
           "川渝"
         ],
         "cuisine_categories": [
-          "Sichuan-Chongqing / 川渝"
+          "Chuan / Sichuan-Chongqing"
         ],
         "signature_dishes": [
           "水煮鱼",
@@ -394,7 +400,7 @@
           "川渝"
         ],
         "cuisine_categories": [
-          "Sichuan-Chongqing / 川渝"
+          "Chuan / Sichuan-Chongqing"
         ],
         "signature_dishes": [
           "回锅肉",
@@ -428,8 +434,9 @@
           "湖南"
         ],
         "cuisine_categories": [
-          "Cantonese / 粤菜",
-          "Hunan / 湘菜"
+          "Yue / Cantonese",
+          "HK / Hong Kong foodways",
+          "Xiang / Hunan"
         ],
         "signature_dishes": [
           "椒盐豆腐",
@@ -463,8 +470,8 @@
           "川味源流"
         ],
         "cuisine_categories": [
-          "Northeast / 东北",
-          "Sichuan-Chongqing / 川渝"
+          "Dongbei / Northeast",
+          "Chuan / Sichuan-Chongqing"
         ],
         "signature_dishes": [
           "杨国福菌菇汤麻辣烫",
@@ -497,7 +504,7 @@
           "川渝"
         ],
         "cuisine_categories": [
-          "Sichuan-Chongqing / 川渝"
+          "Chuan / Sichuan-Chongqing"
         ],
         "signature_dishes": [
           "水煮鱼",
@@ -531,7 +538,7 @@
           "川渝"
         ],
         "cuisine_categories": [
-          "Sichuan-Chongqing / 川渝"
+          "Chuan / Sichuan-Chongqing"
         ],
         "signature_dishes": [
           "夫妻肺片",
@@ -565,7 +572,7 @@
           "川渝"
         ],
         "cuisine_categories": [
-          "Sichuan-Chongqing / 川渝"
+          "Chuan / Sichuan-Chongqing"
         ],
         "signature_dishes": [
           "跷脚牛肉",
@@ -598,7 +605,7 @@
           "川渝"
         ],
         "cuisine_categories": [
-          "Sichuan-Chongqing / 川渝"
+          "Chuan / Sichuan-Chongqing"
         ],
         "signature_dishes": [
           "重庆风味麻辣锅",
@@ -632,7 +639,7 @@
           "川渝"
         ],
         "cuisine_categories": [
-          "Sichuan-Chongqing / 川渝"
+          "Chuan / Sichuan-Chongqing"
         ],
         "signature_dishes": [
           "麻辣鸳鸯锅",
@@ -667,7 +674,8 @@
           "香港"
         ],
         "cuisine_categories": [
-          "Cantonese / 粤菜"
+          "Yue / Cantonese",
+          "HK / Hong Kong foodways"
         ],
         "signature_dishes": [
           "红米肠与虾饺",
@@ -701,7 +709,8 @@
           "香港"
         ],
         "cuisine_categories": [
-          "Cantonese / 粤菜"
+          "Yue / Cantonese",
+          "HK / Hong Kong foodways"
         ],
         "signature_dishes": [
           "干炒牛河",
@@ -734,7 +743,8 @@
           "香港"
         ],
         "cuisine_categories": [
-          "Cantonese / 粤菜"
+          "Yue / Cantonese",
+          "HK / Hong Kong foodways"
         ],
         "signature_dishes": [
           "早茶点心",
@@ -769,7 +779,7 @@
           "潮汕"
         ],
         "cuisine_categories": [
-          "Cantonese / 粤菜"
+          "Yue / Cantonese"
         ],
         "signature_dishes": [
           "潮汕牛肉火锅",
@@ -802,7 +812,7 @@
           "东北"
         ],
         "cuisine_categories": [
-          "Northeast / 东北"
+          "Dongbei / Northeast"
         ],
         "signature_dishes": [
           "东北铁锅炖",
@@ -835,7 +845,8 @@
           "香港"
         ],
         "cuisine_categories": [
-          "Cantonese / 粤菜"
+          "Yue / Cantonese",
+          "HK / Hong Kong foodways"
         ],
         "signature_dishes": [
           "现代点心",
@@ -868,7 +879,7 @@
           "陕西"
         ],
         "cuisine_categories": [
-          "Shaanxi / 陕西"
+          "Xibei / Northwest"
         ],
         "signature_dishes": [
           "牛肉汤面",
@@ -901,7 +912,8 @@
           "香港"
         ],
         "cuisine_categories": [
-          "Cantonese / 粤菜"
+          "Yue / Cantonese",
+          "HK / Hong Kong foodways"
         ],
         "signature_dishes": [
           "宫保豆腐",
