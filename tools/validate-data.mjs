@@ -107,8 +107,22 @@ const missingImages = uniqueDishNames.filter((name) => {
 const unknownImageAssignments = Object.entries(imageAssignments)
   .filter(([, imageId]) => !imageIds.has(imageId))
   .map(([dishName, imageId]) => `${dishName} -> ${imageId}`);
+const imagesById = new Map(imageLibrary.map((image) => [image.id, image]));
+const generalImageAssignments = Object.entries(imageAssignments)
+  .filter(([, imageId]) => imagesById.get(imageId)?.referenceType === "general")
+  .map(([dishName, imageId]) => `${dishName} -> ${imageId}`);
+const dishesByImageId = Object.entries(imageAssignments).reduce((groups, [dishName, imageId]) => {
+  if (!groups.has(imageId)) groups.set(imageId, []);
+  groups.get(imageId).push(dishName);
+  return groups;
+}, new Map());
+const reusedImageAssignments = [...dishesByImageId.entries()]
+  .filter(([, dishNames]) => dishNames.length > 1)
+  .map(([imageId, dishNames]) => `${imageId}: ${dishNames.join(", ")}`);
 
 if (missingImages.length) warnings.push(`${missingImages.length} dish names intentionally have no verified image: ${missingImages.join(", ")}`);
+if (generalImageAssignments.length) warnings.push(`${generalImageAssignments.length} dish images are still general references: ${generalImageAssignments.join("; ")}`);
+if (reusedImageAssignments.length) warnings.push(`${reusedImageAssignments.length} image files are reused across dish labels: ${reusedImageAssignments.join("; ")}`);
 for (const assignment of unknownImageAssignments) errors.push(`Unknown image assignment: ${assignment}`);
 
 const categoryLabels = new Map(data.cuisineCategories.map((category) => [category.id, category.label]));

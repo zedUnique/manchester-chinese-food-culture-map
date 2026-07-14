@@ -405,6 +405,57 @@ const dishImageLibrary = [
     sourceUrl: "https://www.xiaohongshu.com/explore/6a0ea99200000000070280be",
     caption: "Chinese-source dish reference (not restaurant-specific)",
     rightsStatus: "permission-pending"
+  },
+  {
+    id: "salt-pepper-tofu-xhs",
+    url: "./assets/dishes/chinese-sources/salt-pepper-tofu-xhs.webp",
+    source: "Xiaohongshu",
+    sourceUrl: "https://www.xiaohongshu.com/explore/65dc5be50000000007027e7c"
+  },
+  {
+    id: "mixed-vegetable-tofu-xhs",
+    url: "./assets/dishes/chinese-sources/mixed-vegetable-tofu-xhs.jpg",
+    source: "Xiaohongshu",
+    sourceUrl: "https://www.xiaohongshu.com/"
+  },
+  {
+    id: "kung-pao-tofu-xhs",
+    url: "./assets/dishes/chinese-sources/kung-pao-tofu-xhs.jpg",
+    source: "Xiaohongshu",
+    sourceUrl: "https://www.xiaohongshu.com/"
+  },
+  {
+    id: "pork-stewed-vermicelli-xhs",
+    url: "./assets/dishes/chinese-sources/pork-stewed-vermicelli-xhs.jpg",
+    source: "Xiaohongshu",
+    sourceUrl: "https://www.xiaohongshu.com/"
+  },
+  {
+    id: "sichuan-spicy-beef-noodles",
+    url: "./assets/dishes/chinese-sources/sichuan-spicy-beef-noodles.jpg",
+    source: "LanguageTeaching / Wikimedia Commons (CC BY 2.0)",
+    sourceUrl: "https://commons.wikimedia.org/wiki/File:Spicy_Beef_%26_Noodles_(Sichuan)_(13212814553).jpg"
+  },
+  {
+    id: "oneplus-seafood-platter",
+    url: "./assets/dishes/chinese-sources/oneplus-seafood-platter.jpg",
+    source: "One+ Restaurant official website",
+    sourceUrl: "https://www.oneplusrestaurant.co.uk/",
+    caption: "Restaurant-specific seafood reference"
+  },
+  {
+    id: "huizhou-fermented-mandarin-fish",
+    url: "./assets/dishes/chinese-sources/huizhou-fermented-mandarin-fish.jpg",
+    source: "Zheng Zhou / Wikimedia Commons (CC BY-SA 4.0)",
+    sourceUrl: "https://commons.wikimedia.org/wiki/File:Fermented_mandarin_fish.jpg",
+    caption: "Verified Huizhou dish reference"
+  },
+  {
+    id: "huizhou-hairy-tofu",
+    url: "./assets/dishes/chinese-sources/huizhou-hairy-tofu.jpg",
+    source: "Zheng Zhou / Wikimedia Commons (CC BY-SA 4.0)",
+    sourceUrl: "https://commons.wikimedia.org/wiki/File:Hairy_Tofu.jpg",
+    caption: "Verified Huizhou dish reference"
   }
 ];
 
@@ -421,7 +472,7 @@ const dishImageAssignments = {
   "重庆风味麻辣锅": "sichuan-hotpot",
   "鸳鸯锅": "sichuan-hotpot",
   "手工面与米饭碗": "noodle-bowl-general",
-  "海鲜烧烤拼盘": "seafood-bbq-general",
+  "海鲜烧烤拼盘": "oneplus-seafood-platter",
   "Haaland Special": "triple-roast-rice-xhs",
   "Lily Kwok's Chicken Curry": "chicken-curry-general",
   "北京烤鸭卷饼": "peking-duck-pancakes",
@@ -436,7 +487,7 @@ const dishImageAssignments = {
   "夫妻肺片": "fuqi-feipian",
   "刀削面与米线": "knife-cut-noodles",
   "跷脚牛肉": "qiaojiao-beef-manchester-xhs",
-  "香辣牛肉面": "beef-noodle-soup",
+  "香辣牛肉面": "sichuan-spicy-beef-noodles",
   "红米肠与虾饺": "dim-sum-general",
   "烧腊三拼": "triple-roast-rice-xhs",
   "烧味拼盘": "triple-roast-rice-xhs",
@@ -447,7 +498,7 @@ const dishImageAssignments = {
   "锅包肉": "guobaorou-general",
   "黑椒牛肉": "black-pepper-beef",
   "牛肉汤面": "beef-noodle-soup",
-  "麻辣牛肉面": "beef-noodle-soup",
+  "麻辣牛肉面": "sichuan-spicy-beef-noodles",
   "素炒面": "noodle-bowl-general",
   "水煮鱼": "sichuan-boiled-fish",
   "回锅肉": "twice-cooked-pork",
@@ -475,6 +526,8 @@ const dishImageAssignments = {
   "佛跳墙": "buddha-jumps-wall",
   "沙茶面": "shacha-noodles",
   "野生菌火锅": "yunnan-mushroom-hotpot",
+  "臭鳜鱼": "huizhou-fermented-mandarin-fish",
+  "徽州毛豆腐": "huizhou-hairy-tofu",
   "早茶点心": "dim-sum-general",
   "粤式点心拼盘": "dim-sum-general",
   "家常点心拼盘": "dim-sum-general",
@@ -490,7 +543,11 @@ const dishImageAssignments = {
   "个人小火锅": "hot-pot-general",
   "杨国福菌菇汤麻辣烫": "yang-guo-fu-mushroom-broth",
   "杨国福番茄汤麻辣烫": "yang-guo-fu-tomato-broth",
-  "麻酱麻辣烫": "malatang"
+  "麻酱麻辣烫": "malatang",
+  "椒盐豆腐": "salt-pepper-tofu-xhs",
+  "无麸质杂菜豆腐": "mixed-vegetable-tofu-xhs",
+  "宫保豆腐": "kung-pao-tofu-xhs",
+  "猪肉炖粉条": "pork-stewed-vermicelli-xhs"
 };
 
 function dishImage(dish) {
@@ -510,11 +567,15 @@ function dishImageMarkup(dish, className = "dish-image") {
       </figure>
     `;
   }
+  const isXiaohongshu = image.sourceUrl?.includes("xiaohongshu.com") || image.source?.includes("Xiaohongshu");
   const caption = image.caption || (image.referenceType === "general" ? "General visual reference" : "Reference image");
+  const sourceCaption = isXiaohongshu
+    ? 'Source: <a href="https://www.xiaohongshu.com/" target="_blank" rel="noreferrer">Xiaohongshu</a>'
+    : `${caption}: ${image.sourceUrl ? `<a href="${image.sourceUrl}" target="_blank" rel="noreferrer">${image.source}</a>` : image.source}`;
   return `
     <figure class="${className}">
       <img src="${image.url}" alt="${dishLabel(dish)} reference photo" loading="lazy" data-dish-image />
-      <figcaption>${caption}: ${image.sourceUrl ? `<a href="${image.sourceUrl}" target="_blank" rel="noreferrer">${image.source}</a>` : image.source}</figcaption>
+      <figcaption>${sourceCaption}</figcaption>
     </figure>
   `;
 }

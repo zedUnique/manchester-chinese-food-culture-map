@@ -860,13 +860,13 @@ const FOOD_MAP_DATA = {
           story: "This is a useful dish for non-meat eaters, showing that Chinese restaurant food is not only meat-centred."
         },
         {
-          name: "无麸质炒菜选择",
-          englishName: "Gluten-free Stir-fry Selection",
+          name: "无麸质杂菜豆腐",
+          englishName: "Gluten-free Tofu with Mixed Vegetables",
           province: "广东",
-          tags: ["gluten-free menu", "wok", "accessibility"],
-          method: "Ingredients are stir-fried with sauces selected or adapted for gluten-free diners.",
-          taste: "Varies by dish, but the key cultural point is accommodation rather than one fixed flavour.",
-          story: "A gluten-free menu makes the project more inclusive for non-Chinese users with dietary restrictions."
+          tags: ["tofu", "mixed vegetables", "gluten-free version"],
+          method: "Tofu and mixed vegetables are stir-fried with sauces adjusted for the restaurant's gluten-free version. Diners must still tell staff that they require the gluten-free preparation.",
+          taste: "Mild, savoury and vegetable-forward, with soft tofu contrasting with crisp mixed vegetables.",
+          story: "The restaurant's separate gluten-free menu makes accommodation visible, but it also shows why users must confirm the exact sauce, preparation and cross-contact controls with staff."
         }
       ]
     },
@@ -1754,9 +1754,9 @@ const FOOD_DISH_DIETARY_PROFILES = {
     note: "Broth recipe and chosen ingredients vary. Confirm stock, seasoning and cross-contact before ordering."
   },
   "椒盐豆腐": { tags: ["soy", "gluten", "vegetarian"] },
-  "无麸质炒菜选择": {
-    tags: [],
-    note: "This is a menu category, not one fixed dish. Confirm the exact item and cross-contact with the restaurant."
+  "无麸质杂菜豆腐": {
+    tags: ["soy", "vegetarian"],
+    note: "The official gluten-free menu lists tofu with mixed vegetables. Tell staff you require the gluten-free version and confirm cross-contact controls."
   },
   "杨国福菌菇汤麻辣烫": {
     tags: ["gluten", "nuts", "soy"],
