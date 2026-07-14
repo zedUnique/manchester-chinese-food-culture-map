@@ -1,7 +1,6 @@
 const state = {
   provinceId: FOOD_MAP_DATA.defaultProvince,
   restaurantId: null,
-  cuisineId: null,
   dishIndex: null,
   searchTerm: "",
   dietaryAvoids: []
@@ -25,8 +24,6 @@ const els = {
   routeLabel: document.querySelector("#routeLabel"),
   activePath: document.querySelector("#activePath"),
   mapLegend: document.querySelector("#mapLegend"),
-  cuisineFilters: document.querySelector("#cuisineFilters"),
-  clearCuisineButton: document.querySelector("#clearCuisineButton"),
   dietaryFilters: document.querySelector("#dietaryFilters"),
   clearDietaryButton: document.querySelector("#clearDietaryButton"),
   searchInput: document.querySelector("#searchInput"),
@@ -629,10 +626,7 @@ function restaurantsForProvince(province = currentProvince()) {
 
 function filteredRestaurants() {
   const term = state.searchTerm.trim().toLowerCase();
-  const base = restaurantsForProvince().filter((restaurant) => {
-    const categoryMatch = state.cuisineId ? restaurant.cuisineCategoryIds.includes(state.cuisineId) : true;
-    return categoryMatch && restaurantHasSafeDish(restaurant);
-  });
+  const base = restaurantsForProvince().filter(restaurantHasSafeDish);
   if (!term) return base;
 
   return base.filter((restaurant) => {
@@ -1007,31 +1001,6 @@ function renderCityMap() {
   });
 }
 
-function renderCuisineFilters() {
-  const province = currentProvince();
-  const relevantCategories = FOOD_MAP_DATA.cuisineCategories.filter((category) => {
-    const isProvinceLinked = category.provinceIds.includes(province.id);
-    const hasRestaurant = restaurantsForProvince(province).some((restaurant) => restaurant.cuisineCategoryIds.includes(category.id));
-    return isProvinceLinked || hasRestaurant;
-  });
-
-  els.cuisineFilters.innerHTML = relevantCategories
-    .map((category) => {
-      const isActive = state.cuisineId === category.id;
-      return `<button class="${isActive ? "is-active" : ""}" data-cuisine="${category.id}" type="button" style="--chip-color:${category.color}">${category.label}</button>`;
-    })
-    .join("");
-
-  document.querySelectorAll("[data-cuisine]").forEach((button) => {
-    button.addEventListener("click", () => {
-      state.cuisineId = state.cuisineId === button.dataset.cuisine ? null : button.dataset.cuisine;
-      state.restaurantId = null;
-      state.dishIndex = null;
-      render();
-    });
-  });
-}
-
 function renderDietaryFilters() {
   els.dietaryFilters.innerHTML = FOOD_MAP_DATA.dietaryFilters
     .map((filter) => {
@@ -1327,11 +1296,6 @@ function renderMethodology() {
 }
 
 function render() {
-  if (state.cuisineId && !FOOD_MAP_DATA.cuisineCategories.some((category) => category.id === state.cuisineId && category.provinceIds.includes(state.provinceId))) {
-    const hasMatchingRestaurant = restaurantsForProvince().some((restaurant) => restaurant.cuisineCategoryIds.includes(state.cuisineId));
-    if (!hasMatchingRestaurant) state.cuisineId = null;
-  }
-  renderCuisineFilters();
   renderDietaryFilters();
   renderProvinceButtons();
   renderProvinceStory();
@@ -1350,18 +1314,10 @@ els.searchInput.addEventListener("input", (event) => {
 els.resetButton.addEventListener("click", () => {
   state.provinceId = FOOD_MAP_DATA.defaultProvince;
   state.restaurantId = null;
-  state.cuisineId = null;
   state.dishIndex = null;
   state.searchTerm = "";
   state.dietaryAvoids = [];
   els.searchInput.value = "";
-  render();
-});
-
-els.clearCuisineButton.addEventListener("click", () => {
-  state.cuisineId = null;
-  state.restaurantId = null;
-  state.dishIndex = null;
   render();
 });
 

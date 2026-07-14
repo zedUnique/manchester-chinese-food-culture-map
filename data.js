@@ -1694,7 +1694,7 @@ const FOOD_MAP_DATA = {
     },
     {
       title: "Manchester Restaurant Evidence Layer",
-      text: "The restaurant filter is a second analytical layer and does not redefine the thirteen map entries. A Manchester restaurant receives one or more regional labels only when its menu, self-description, public evidence or fieldwork links it to those traditions. Labels may overlap because one restaurant can serve several regional foodways. Hotpot, malatang and noodles remain dish or dining formats, while family memory remains a narrative theme rather than a region."
+      text: "Regional labels shown on restaurant cards form a second analytical layer and do not redefine the thirteen map entries. A Manchester restaurant receives one or more labels only when its menu, self-description, public evidence or fieldwork links it to those traditions. Labels may overlap because one restaurant can serve several regional foodways. Hotpot, malatang and noodles remain dish or dining formats, while family memory remains a narrative theme rather than a region."
     },
     {
       title: "Data Model",

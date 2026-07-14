@@ -14,7 +14,7 @@
     />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
-    <link rel="stylesheet" href="./styles.css?v=20260714-map-layout-type" />
+    <link rel="stylesheet" href="./styles.css?v=20260714-simplified-details" />
   </head>
   <body>
     <div class="app-shell">
@@ -110,15 +110,6 @@
             <section class="culture-column" aria-label="Selected regional cuisine and filters">
               <div class="province-story" id="provinceStory" aria-live="polite"></div>
 
-              <div class="filter-panel" aria-label="Manchester restaurant regional evidence filter">
-                <div class="filter-heading">
-                  <span>Restaurant regional evidence</span>
-                  <button id="clearCuisineButton" type="button">All</button>
-                </div>
-                <div class="filter-chips" id="cuisineFilters"></div>
-                <p class="classification-note">This filters Manchester restaurant evidence linked to the selected map entry; it does not redefine the 13-entry framework. Labels come from menus, restaurant self-description, public records or fieldwork and may overlap.</p>
-              </div>
-
               <div class="filter-panel dietary-filter-panel" aria-label="Dietary needs filter">
                 <div class="filter-heading">
                   <span>Dietary needs</span>
@@ -171,7 +162,7 @@
       crossorigin=""
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
-    <script src="./data.js?v=20260714-map-layout-type"></script>
-    <script src="./app.js?v=20260714-map-layout-type"></script>
+    <script src="./data.js?v=20260714-simplified-details"></script>
+    <script src="./app.js?v=20260714-simplified-details"></script>
   </body>
 </html>

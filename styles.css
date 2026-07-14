@@ -971,16 +971,6 @@ h2 {
   color: #fff;
 }
 
-.classification-note {
-  margin: 10px 0 0;
-  padding-top: 9px;
-  border-top: 1px solid #e7ecef;
-  color: #667785;
-  font-size: 10.5px;
-  font-weight: 650;
-  line-height: 1.5;
-}
-
 .dietary-filter-panel {
   border-left: 4px solid #a9cfea;
   background: #f8fbfe;
