@@ -36,6 +36,10 @@ body {
   background-color: var(--paper);
 }
 
+body.drawer-open {
+  overflow: hidden;
+}
+
 button,
 input {
   font: inherit;
@@ -427,6 +431,7 @@ h2 {
 .city-map-wrap {
   aspect-ratio: 660 / 380;
   background: #f3f8fc;
+  isolation: isolate;
 }
 
 .china-map-wrap {
@@ -1661,7 +1666,7 @@ h2 {
 .source-drawer {
   position: fixed;
   inset: 0;
-  z-index: 20;
+  z-index: 2000;
   display: none;
   justify-content: end;
   background: rgba(23, 33, 31, 0.38);

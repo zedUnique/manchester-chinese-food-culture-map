@@ -14,7 +14,7 @@
     />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
-    <link rel="stylesheet" href="./styles.css?v=20260714-simplified-details" />
+    <link rel="stylesheet" href="./styles.css?v=20260714-drawer-stack" />
   </head>
   <body>
     <div class="app-shell">
@@ -37,11 +37,11 @@
           <button class="icon-button" id="resetButton" type="button" title="Reset view" aria-label="Reset view">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg>
           </button>
-          <button class="source-button" id="sourceButton" type="button">
+          <button class="source-button" id="sourceButton" type="button" title="View research sources and data notes" aria-expanded="false" aria-controls="sourceDrawer">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 5.5A3.5 3.5 0 0 1 6 2h5v18H6a3.5 3.5 0 0 0-3.5 2V5.5Z"/><path d="M21.5 5.5A3.5 3.5 0 0 0 18 2h-5v18h5a3.5 3.5 0 0 1 3.5 2V5.5Z"/></svg>
             <span>Sources</span>
           </button>
-          <button class="source-button" id="methodButton" type="button">
+          <button class="source-button" id="methodButton" type="button" title="View the project research method" aria-expanded="false" aria-controls="methodDrawer">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3h6M10 3v6l-5.5 9.5A1.7 1.7 0 0 0 6 21h12a1.7 1.7 0 0 0 1.5-2.5L14 9V3"/><path d="M8 15h8"/></svg>
             <span>Method</span>
           </button>
@@ -137,7 +137,7 @@
       <div id="dishDialogBody"></div>
     </dialog>
 
-    <aside class="source-drawer" id="sourceDrawer" aria-label="Sources">
+    <aside class="source-drawer" id="sourceDrawer" aria-label="Sources" aria-hidden="true">
       <div class="source-card">
         <button class="dialog-close" id="sourceClose" type="button" aria-label="Close sources">×</button>
         <p class="eyebrow">Research Notes</p>
@@ -147,7 +147,7 @@
       </div>
     </aside>
 
-    <aside class="source-drawer" id="methodDrawer" aria-label="Method notes">
+    <aside class="source-drawer" id="methodDrawer" aria-label="Method notes" aria-hidden="true">
       <div class="source-card">
         <button class="dialog-close" id="methodClose" type="button" aria-label="Close method notes">×</button>
         <p class="eyebrow">Methodology</p>
@@ -162,7 +162,7 @@
       crossorigin=""
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
-    <script src="./data.js?v=20260714-simplified-details"></script>
-    <script src="./app.js?v=20260714-simplified-details"></script>
+    <script src="./data.js?v=20260714-drawer-stack"></script>
+    <script src="./app.js?v=20260714-drawer-stack"></script>
   </body>
 </html>

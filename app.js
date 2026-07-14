@@ -1295,6 +1295,13 @@ function renderMethodology() {
     .join("");
 }
 
+function setDrawerOpen(drawer, button, isOpen) {
+  drawer.classList.toggle("is-open", isOpen);
+  drawer.setAttribute("aria-hidden", String(!isOpen));
+  button.setAttribute("aria-expanded", String(isOpen));
+  document.body.classList.toggle("drawer-open", isOpen);
+}
+
 function render() {
   renderDietaryFilters();
   renderProvinceButtons();
@@ -1334,27 +1341,33 @@ els.dishDialog.addEventListener("click", (event) => {
 });
 
 els.sourceButton.addEventListener("click", () => {
-  els.sourceDrawer.classList.add("is-open");
+  setDrawerOpen(els.sourceDrawer, els.sourceButton, true);
 });
 
 els.sourceClose.addEventListener("click", () => {
-  els.sourceDrawer.classList.remove("is-open");
+  setDrawerOpen(els.sourceDrawer, els.sourceButton, false);
 });
 
 els.sourceDrawer.addEventListener("click", (event) => {
-  if (event.target === els.sourceDrawer) els.sourceDrawer.classList.remove("is-open");
+  if (event.target === els.sourceDrawer) setDrawerOpen(els.sourceDrawer, els.sourceButton, false);
 });
 
 els.methodButton.addEventListener("click", () => {
-  els.methodDrawer.classList.add("is-open");
+  setDrawerOpen(els.methodDrawer, els.methodButton, true);
 });
 
 els.methodClose.addEventListener("click", () => {
-  els.methodDrawer.classList.remove("is-open");
+  setDrawerOpen(els.methodDrawer, els.methodButton, false);
 });
 
 els.methodDrawer.addEventListener("click", (event) => {
-  if (event.target === els.methodDrawer) els.methodDrawer.classList.remove("is-open");
+  if (event.target === els.methodDrawer) setDrawerOpen(els.methodDrawer, els.methodButton, false);
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key !== "Escape") return;
+  if (els.sourceDrawer.classList.contains("is-open")) setDrawerOpen(els.sourceDrawer, els.sourceButton, false);
+  if (els.methodDrawer.classList.contains("is-open")) setDrawerOpen(els.methodDrawer, els.methodButton, false);
 });
 
 renderSources();
