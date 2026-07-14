@@ -1,0 +1,940 @@
+{
+  "type": "FeatureCollection",
+  "name": "Manchester Chinese Food Culture POIs",
+  "generatedAt": "2026-07-14T15:46:12.697Z",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.2373,
+          53.4774
+        ]
+      },
+      "properties": {
+        "id": "red-chilli",
+        "name": "Red Chilli 红辣椒",
+        "area": "Oxford Road / Portland Street",
+        "province_links": [
+          "川渝",
+          "北京"
+        ],
+        "cuisine_categories": [
+          "Sichuan-Chongqing / 川渝",
+          "Beijing / 京菜"
+        ],
+        "signature_dishes": [
+          "北京烤鸭",
+          "老北京炸酱面",
+          "川渝麻婆豆腐",
+          "川渝担担面",
+          "歌乐山辣子鸡"
+        ],
+        "verification_status": "partial",
+        "last_checked": "2026-07-08",
+        "source_ids": [
+          "red-chilli",
+          "beijing-cuisine",
+          "peking-duck",
+          "zhajiangmian"
+        ],
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Red%20Chilli%20%E7%BA%A2%E8%BE%A3%E6%A4%92%20Oxford%20Road%20%2F%20Portland%20Street%20Manchester",
+        "data_note": "Red Chilli official website says it specialises in Beijing and Sichuan dishes; final dish availability should still be checked against the current menu or fieldwork."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.2389,
+          53.4734
+        ]
+      },
+      "properties": {
+        "id": "one-plus",
+        "name": "One+ Restaurant",
+        "area": "42 Charles Street",
+        "province_links": [
+          "川渝",
+          "云南"
+        ],
+        "cuisine_categories": [
+          "Hotpot / 火锅",
+          "Noodles & Rice / 米面主食"
+        ],
+        "signature_dishes": [
+          "个人小火锅",
+          "手工面与米饭碗",
+          "海鲜烧烤拼盘"
+        ],
+        "verification_status": "verified",
+        "last_checked": "2026-07-08",
+        "source_ids": [
+          "one-plus"
+        ],
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=One%2B%20Restaurant%2042%20Charles%20Street%20Manchester",
+        "data_note": "Location and concept are based on public restaurant information; detailed dish wording can be replaced after fieldwork."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.2407,
+          53.478
+        ]
+      },
+      "properties": {
+        "id": "happy-seasons",
+        "name": "Happy Seasons",
+        "area": "Chinatown",
+        "province_links": [
+          "广东",
+          "香港"
+        ],
+        "cuisine_categories": [
+          "Cantonese / 粤菜",
+          "Family Memory / 家族记忆"
+        ],
+        "signature_dishes": [
+          "三拼烧味饭",
+          "Haaland Special"
+        ],
+        "verification_status": "partial",
+        "last_checked": "2026-07-08",
+        "source_ids": [
+          "happy-seasons"
+        ],
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Happy%20Seasons%20Chinatown%20Manchester",
+        "data_note": "Public reports and menu observations should be verified with a site visit or restaurant website before final report use."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.2361,
+          53.4831
+        ]
+      },
+      "properties": {
+        "id": "sweet-mandarin",
+        "name": "Sweet Mandarin",
+        "area": "Northern Quarter",
+        "province_links": [
+          "香港",
+          "广东"
+        ],
+        "cuisine_categories": [
+          "Cantonese / 粤菜",
+          "Family Memory / 家族记忆"
+        ],
+        "signature_dishes": [
+          "Lily Kwok's Chicken Curry",
+          "家常点心拼盘"
+        ],
+        "verification_status": "partial",
+        "last_checked": "2026-07-08",
+        "source_ids": [
+          "lily-kwok"
+        ],
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Sweet%20Mandarin%20Northern%20Quarter%20Manchester",
+        "data_note": "Cultural narrative is suitable for dissertation framing, but menu details should be checked against current restaurant materials."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.2409458,
+          53.4778246
+        ]
+      },
+      "properties": {
+        "id": "yang-sing",
+        "name": "Yang Sing",
+        "area": "34 Princess Street / Chinatown",
+        "province_links": [
+          "广东",
+          "香港",
+          "北京"
+        ],
+        "cuisine_categories": [
+          "Cantonese / 粤菜",
+          "Family Memory / 家族记忆",
+          "Beijing / 京菜"
+        ],
+        "signature_dishes": [
+          "粤式点心拼盘",
+          "北京烤鸭卷饼"
+        ],
+        "verification_status": "verified",
+        "last_checked": "2026-07-08",
+        "source_ids": [
+          "osm-overpass"
+        ],
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Yang%20Sing%2034%20Princess%20Street%20%2F%20Chinatown%20Manchester",
+        "data_note": "Added from OpenStreetMap public POI data; signature dishes are representative Cantonese/banquet examples and should be checked against the current menu."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.2393628,
+          53.4785971
+        ]
+      },
+      "properties": {
+        "id": "mei-dim",
+        "name": "Mei Dim",
+        "area": "45 Faulkner Street / Chinatown",
+        "province_links": [
+          "广东",
+          "香港"
+        ],
+        "cuisine_categories": [
+          "Cantonese / 粤菜",
+          "Family Memory / 家族记忆"
+        ],
+        "signature_dishes": [
+          "虾饺烧卖",
+          "烧鸭饭"
+        ],
+        "verification_status": "verified",
+        "last_checked": "2026-07-08",
+        "source_ids": [
+          "osm-overpass"
+        ],
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Mei%20Dim%2045%20Faulkner%20Street%20%2F%20Chinatown%20Manchester",
+        "data_note": "Added from OpenStreetMap public POI data; dim sum examples should be checked against the current menu."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.2399014,
+          53.4791449
+        ]
+      },
+      "properties": {
+        "id": "little-yang-sing",
+        "name": "Little Yang Sing",
+        "area": "17 George Street / Chinatown",
+        "province_links": [
+          "广东",
+          "香港"
+        ],
+        "cuisine_categories": [
+          "Cantonese / 粤菜",
+          "Family Memory / 家族记忆"
+        ],
+        "signature_dishes": [
+          "家常点心篮",
+          "广式脆面"
+        ],
+        "verification_status": "verified",
+        "last_checked": "2026-07-08",
+        "source_ids": [
+          "osm-overpass"
+        ],
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Little%20Yang%20Sing%2017%20George%20Street%20%2F%20Chinatown%20Manchester",
+        "data_note": "Added from OpenStreetMap public POI data; dish wording is representative and should be verified with the current menu."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.2467274,
+          53.4796671
+        ]
+      },
+      "properties": {
+        "id": "wings",
+        "name": "Wings Restaurant",
+        "area": "1 Lincoln Square",
+        "province_links": [
+          "广东",
+          "香港"
+        ],
+        "cuisine_categories": [
+          "Cantonese / 粤菜",
+          "Family Memory / 家族记忆"
+        ],
+        "signature_dishes": [
+          "粤式烧鸭",
+          "海鲜炒饭"
+        ],
+        "verification_status": "verified",
+        "last_checked": "2026-07-08",
+        "source_ids": [
+          "osm-overpass"
+        ],
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Wings%20Restaurant%201%20Lincoln%20Square%20Manchester",
+        "data_note": "Added from OpenStreetMap public POI data; the restaurant is used here as a city-centre Cantonese banquet-style POI."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.240063,
+          53.4790309
+        ]
+      },
+      "properties": {
+        "id": "hunan-restaurant",
+        "name": "Hunan / Xiang Zhi Wei 湘之味",
+        "area": "19 George Street / Chinatown",
+        "province_links": [
+          "湖南"
+        ],
+        "cuisine_categories": [
+          "Hunan / 湘菜"
+        ],
+        "signature_dishes": [
+          "剁椒鱼",
+          "小炒牛肉"
+        ],
+        "verification_status": "verified",
+        "last_checked": "2026-07-08",
+        "source_ids": [
+          "osm-overpass",
+          "xiaohongshu-manchester-leads"
+        ],
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Hunan%20%2F%20Xiang%20Zhi%20Wei%20%E6%B9%98%E4%B9%8B%E5%91%B3%2019%20George%20Street%20%2F%20Chinatown%20Manchester",
+        "data_note": "OpenStreetMap provides the Chinatown POI; Xiaohongshu searches repeatedly surface 湘之味 as a Manchester Hunan restaurant lead. Current menu and English naming should be verified before final submission."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.2404495,
+          53.4780282
+        ]
+      },
+      "properties": {
+        "id": "noodle-alley",
+        "name": "Noodle Alley 宽窄巷",
+        "area": "56 Faulkner Street, Manchester M1 4FH / Chinatown",
+        "province_links": [
+          "川渝"
+        ],
+        "cuisine_categories": [
+          "Sichuan-Chongqing / 川渝",
+          "Noodles & Rice / 米面主食"
+        ],
+        "signature_dishes": [
+          "重庆小面",
+          "宜宾燃面",
+          "粉蒸牛肉"
+        ],
+        "verification_status": "verified",
+        "last_checked": "2026-07-08",
+        "source_ids": [
+          "osm-overpass",
+          "xiaohongshu-noodle-alley-2023"
+        ],
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Noodle%20Alley%20%E5%AE%BD%E7%AA%84%E5%B7%B7%2056%20Faulkner%20Street%2C%20Manchester%20M1%204FH%20%2F%20Chinatown%20Manchester",
+        "data_note": "OpenStreetMap provides the Chinatown POI. A public Xiaohongshu food post dated May 2023 identifies the restaurant at 56 Faulkner Street, M1 4FH and records Sichuan snacks including Chongqing xiaomian, Yibin ranmian and steamed beef; current menu availability still needs checking."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.2404748,
+          53.4780086
+        ]
+      },
+      "properties": {
+        "id": "spicy-city",
+        "name": "Spicy City Restaurant",
+        "area": "56 Faulkner Street / Chinatown",
+        "province_links": [
+          "川渝"
+        ],
+        "cuisine_categories": [
+          "Sichuan-Chongqing / 川渝"
+        ],
+        "signature_dishes": [
+          "水煮鱼",
+          "干锅鸡"
+        ],
+        "verification_status": "partial",
+        "last_checked": "2026-07-08",
+        "source_ids": [
+          "osm-overpass"
+        ],
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Spicy%20City%20Restaurant%2056%20Faulkner%20Street%20%2F%20Chinatown%20Manchester",
+        "data_note": "Added from OpenStreetMap public POI data; dish examples should be verified with menu or fieldwork."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.2393232,
+          53.4786274
+        ]
+      },
+      "properties": {
+        "id": "chuan-guoxiang",
+        "name": "Chuan Guoxiang",
+        "area": "43 Faulkner Street / Chinatown",
+        "province_links": [
+          "川渝"
+        ],
+        "cuisine_categories": [
+          "Sichuan-Chongqing / 川渝"
+        ],
+        "signature_dishes": [
+          "回锅肉",
+          "麻辣香锅"
+        ],
+        "verification_status": "partial",
+        "last_checked": "2026-07-08",
+        "source_ids": [
+          "osm-overpass"
+        ],
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Chuan%20Guoxiang%2043%20Faulkner%20Street%20%2F%20Chinatown%20Manchester",
+        "data_note": "Added from OpenStreetMap public POI data; Sichuan dish examples are representative and need menu confirmation."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.2291567,
+          53.4835686
+        ]
+      },
+      "properties": {
+        "id": "blue-eyed-panda",
+        "name": "Blue Eyed Panda",
+        "area": "3 Jersey Street / Ancoats",
+        "province_links": [
+          "广东",
+          "香港",
+          "湖南"
+        ],
+        "cuisine_categories": [
+          "Cantonese / 粤菜",
+          "Hunan / 湘菜",
+          "Family Memory / 家族记忆"
+        ],
+        "signature_dishes": [
+          "椒盐豆腐",
+          "无麸质炒菜选择"
+        ],
+        "verification_status": "verified",
+        "last_checked": "2026-07-08",
+        "source_ids": [
+          "osm-overpass",
+          "blue-eyed-panda"
+        ],
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Blue%20Eyed%20Panda%203%20Jersey%20Street%20%2F%20Ancoats%20Manchester",
+        "data_note": "Official website confirms the address and lists a gluten-free menu; exact dish availability still needs current menu checks."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.2404,
+          53.4782
+        ]
+      },
+      "properties": {
+        "id": "yang-guo-fu",
+        "name": "Yang Guo Fu Ma La Tang 杨国福麻辣烫",
+        "area": "Manchester, exact address to verify",
+        "province_links": [
+          "东北",
+          "川味源流"
+        ],
+        "cuisine_categories": [
+          "Malatang / 麻辣烫",
+          "Northeast / 东北",
+          "Hotpot / 火锅"
+        ],
+        "signature_dishes": [
+          "杨国福菌菇汤麻辣烫",
+          "杨国福番茄汤麻辣烫"
+        ],
+        "verification_status": "lead",
+        "last_checked": "2026-07-08",
+        "source_ids": [
+          "user-reported-xhs",
+          "malatang-background"
+        ],
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Yang%20Guo%20Fu%20Ma%20La%20Tang%20%E6%9D%A8%E5%9B%BD%E7%A6%8F%E9%BA%BB%E8%BE%A3%E7%83%AB%20Manchester%2C%20exact%20address%20to%20verify%20Manchester",
+        "data_note": "User-reported from Xiaohongshu-style Manchester Chinese food discovery; public geocoding did not return a stable Manchester POI, so this is a placeholder point near Chinatown until the exact address is confirmed."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.2402,
+          53.4729
+        ]
+      },
+      "properties": {
+        "id": "lameizi",
+        "name": "Lameizi Restaurant & Supermarket 辣妹子",
+        "area": "City Centre, Chester St, Manchester M1 5QS / Floor 1, Manchester Metropolitan University",
+        "province_links": [
+          "川渝"
+        ],
+        "cuisine_categories": [
+          "Sichuan-Chongqing / 川渝"
+        ],
+        "signature_dishes": [
+          "水煮鱼",
+          "麻辣香锅"
+        ],
+        "verification_status": "verified",
+        "last_checked": "2026-07-08",
+        "source_ids": [
+          "google-maps-lameizi",
+          "sichuan-cuisine",
+          "mala-seasoning"
+        ],
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Lameizi%20Restaurant%20%26%20Supermarket%20%E8%BE%A3%E5%A6%B9%E5%AD%90%20City%20Centre%2C%20Chester%20St%2C%20Manchester%20M1%205QS%20%2F%20Floor%201%2C%20Manchester%20Metropolitan%20University%20Manchester",
+        "data_note": "User-provided Google Maps screenshots confirm the listing name, Chinese name, address, Google category and rating lead. Coordinates are placed near Chester Street for the prototype and should be checked with a copied Google Maps pin before final submission."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.2389,
+          53.4682
+        ]
+      },
+      "properties": {
+        "id": "chuan-yun-xuan",
+        "name": "Chuan Yun Xuan 川韵轩",
+        "area": "Near RNCM / M15 6AD lead",
+        "province_links": [
+          "川渝"
+        ],
+        "cuisine_categories": [
+          "Sichuan-Chongqing / 川渝",
+          "Noodles & Rice / 米面主食"
+        ],
+        "signature_dishes": [
+          "夫妻肺片",
+          "刀削面与米线"
+        ],
+        "verification_status": "partial",
+        "last_checked": "2026-07-08",
+        "source_ids": [
+          "xiaohongshu-manchester-leads",
+          "sichuan-cuisine",
+          "mala-seasoning"
+        ],
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Chuan%20Yun%20Xuan%20%E5%B7%9D%E9%9F%B5%E8%BD%A9%20Near%20RNCM%20%2F%20M15%206AD%20lead%20Manchester",
+        "data_note": "Xiaohongshu posts repeatedly identify 川韵轩 as a newer Manchester Sichuan restaurant near RNCM, with one comment giving M15 6AD. Exact storefront coordinates and current menu need Google Maps or fieldwork verification."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.2396,
+          53.47855
+        ]
+      },
+      "properties": {
+        "id": "hao-zai-lai",
+        "name": "Hao Zai Lai Noodle House 好再来面馆",
+        "area": "Chinatown, near Teapresso lead",
+        "province_links": [
+          "川渝"
+        ],
+        "cuisine_categories": [
+          "Sichuan-Chongqing / 川渝",
+          "Noodles & Rice / 米面主食"
+        ],
+        "signature_dishes": [
+          "跷脚牛肉",
+          "香辣牛肉面"
+        ],
+        "verification_status": "lead",
+        "last_checked": "2026-07-08",
+        "source_ids": [
+          "xiaohongshu-manchester-leads",
+          "sichuan-cuisine"
+        ],
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Hao%20Zai%20Lai%20Noodle%20House%20%E5%A5%BD%E5%86%8D%E6%9D%A5%E9%9D%A2%E9%A6%86%20Chinatown%2C%20near%20Teapresso%20lead%20Manchester",
+        "data_note": "Xiaohongshu posts describe 好再来面馆 as a newer Chinatown noodle point near Teapresso. Exact address and official English name need verification."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.24099,
+          53.47287
+        ]
+      },
+      "properties": {
+        "id": "no8-hotpot",
+        "name": "No.8 Hotpot 星期八火锅",
+        "area": "Unit 7, The Quadrangle, Hulme Street, Manchester M1 5GL",
+        "province_links": [
+          "川渝"
+        ],
+        "cuisine_categories": [
+          "Sichuan-Chongqing / 川渝",
+          "Hotpot / 火锅"
+        ],
+        "signature_dishes": [
+          "重庆风味麻辣锅",
+          "鸳鸯锅"
+        ],
+        "verification_status": "verified",
+        "last_checked": "2026-07-14",
+        "source_ids": [
+          "no8-official",
+          "no8-menu",
+          "chongqing-hotpot"
+        ],
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=No.8%20Hotpot%20%E6%98%9F%E6%9C%9F%E5%85%AB%E7%81%AB%E9%94%85%20Unit%207%2C%20The%20Quadrangle%2C%20Hulme%20Street%2C%20Manchester%20M1%205GL%20Manchester",
+        "data_note": "No.8's official website verifies its Unit 7 address and describes the restaurant as serving traditional Sichuan-style hot pot with a modern twist. The Chongqing-style interpretation is additionally informed by a user field assessment and is presented as a cultural classification rather than the restaurant's official wording. Broths, ingredients and opening details should be reconfirmed before a visit."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.24031,
+          53.47846
+        ]
+      },
+      "properties": {
+        "id": "xiongqi",
+        "name": "XiongQi Hot Pot 雄柒火锅",
+        "area": "56 Faulkner Street, Manchester M1 4FH",
+        "province_links": [
+          "川渝"
+        ],
+        "cuisine_categories": [
+          "Sichuan-Chongqing / 川渝",
+          "Hotpot / 火锅"
+        ],
+        "signature_dishes": [
+          "麻辣鸳鸯锅",
+          "辣子鸡"
+        ],
+        "verification_status": "verified",
+        "last_checked": "2026-07-14",
+        "source_ids": [
+          "xiongqi-manchester",
+          "xiongqi-menu",
+          "sichuan-cuisine"
+        ],
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=XiongQi%20Hot%20Pot%20%E9%9B%84%E6%9F%92%E7%81%AB%E9%94%85%2056%20Faulkner%20Street%2C%20Manchester%20M1%204FH%20Manchester",
+        "data_note": "The Manchester Chinese directory lists XiongQi at 56 Faulkner Street, while the restaurant's published menu identifies a hot-pot offer and lists a Manchester contact number. Menu details still need periodic checking because restaurant dishes and prices change."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.2401,
+          53.4789
+        ]
+      },
+      "properties": {
+        "id": "onlyyu",
+        "name": "ONLYYU / Only Yu",
+        "area": "58-60 George Street, Manchester M1 4HF",
+        "province_links": [
+          "广东",
+          "香港"
+        ],
+        "cuisine_categories": [
+          "Cantonese / 粤菜",
+          "Family Memory / 家族记忆"
+        ],
+        "signature_dishes": [
+          "红米肠与虾饺",
+          "烧腊三拼"
+        ],
+        "verification_status": "verified",
+        "last_checked": "2026-07-14",
+        "source_ids": [
+          "onlyyu-official",
+          "xiaohongshu-manchester-leads"
+        ],
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=ONLYYU%20%2F%20Only%20Yu%2058-60%20George%20Street%2C%20Manchester%20M1%204HF%20Manchester",
+        "data_note": "Only Yu's official website lists its first- and second-floor restaurant at 58-60 George Street. Dish availability and opening hours should still be checked before a visit."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.2402,
+          53.47865
+        ]
+      },
+      "properties": {
+        "id": "lao-di-fang",
+        "name": "Lao Di Fang 老地方大酒楼",
+        "area": "Chinatown, exact address to verify",
+        "province_links": [
+          "广东",
+          "香港"
+        ],
+        "cuisine_categories": [
+          "Cantonese / 粤菜",
+          "Family Memory / 家族记忆",
+          "Hotpot / 火锅"
+        ],
+        "signature_dishes": [
+          "干炒牛河",
+          "烧味拼盘"
+        ],
+        "verification_status": "lead",
+        "last_checked": "2026-07-08",
+        "source_ids": [
+          "xiaohongshu-manchester-leads"
+        ],
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Lao%20Di%20Fang%20%E8%80%81%E5%9C%B0%E6%96%B9%E5%A4%A7%E9%85%92%E6%A5%BC%20Chinatown%2C%20exact%20address%20to%20verify%20Manchester",
+        "data_note": "Xiaohongshu posts repeatedly mention 老地方 as a Chinatown Cantonese restaurant with dim sum, roast meats, hot pot or KTV/private-room context. Exact address should be confirmed."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.2393,
+          53.4689
+        ]
+      },
+      "properties": {
+        "id": "taiwu",
+        "name": "Tai Wu 太湖",
+        "area": "81 Upper Brook Street, Manchester M13 9TX",
+        "province_links": [
+          "广东",
+          "香港"
+        ],
+        "cuisine_categories": [
+          "Cantonese / 粤菜",
+          "Family Memory / 家族记忆"
+        ],
+        "signature_dishes": [
+          "早茶点心",
+          "烧鸭与河粉"
+        ],
+        "verification_status": "verified",
+        "last_checked": "2026-07-14",
+        "source_ids": [
+          "taiwu-official",
+          "taiwu-food-standards",
+          "xiaohongshu-manchester-leads"
+        ],
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Tai%20Wu%20%E5%A4%AA%E6%B9%96%2081%20Upper%20Brook%20Street%2C%20Manchester%20M13%209TX%20Manchester",
+        "data_note": "Tai Wu's official booking page and the public Food Standards listing identify the restaurant at 81 Upper Brook Street. Individual dishes and service times should be rechecked before a visit."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.2412,
+          53.4729
+        ]
+      },
+      "properties": {
+        "id": "chao-niu-yan",
+        "name": "Chao Niu Yan 潮牛宴",
+        "area": "61-63 Whitworth Street, Manchester M1 3NY",
+        "province_links": [
+          "广东",
+          "潮汕"
+        ],
+        "cuisine_categories": [
+          "Cantonese / 粤菜",
+          "Hotpot / 火锅"
+        ],
+        "signature_dishes": [
+          "潮汕牛肉火锅",
+          "手打牛肉丸"
+        ],
+        "verification_status": "partial",
+        "last_checked": "2026-07-14",
+        "source_ids": [
+          "chao-niu-thefork",
+          "xiaohongshu-manchester-leads"
+        ],
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Chao%20Niu%20Yan%20%E6%BD%AE%E7%89%9B%E5%AE%B4%2061-63%20Whitworth%20Street%2C%20Manchester%20M1%203NY%20Manchester",
+        "data_note": "A current public restaurant listing gives 61-63 Whitworth Street and a menu centred on Chaoshan beef hot pot, beef broths and freshly cut beef. An official first-party website has not yet been located."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.2387,
+          53.4737
+        ]
+      },
+      "properties": {
+        "id": "meishi-meike",
+        "name": "Meishi Meike 美时美客",
+        "area": "Manchester, exact address to verify",
+        "province_links": [
+          "东北"
+        ],
+        "cuisine_categories": [
+          "Northeast / 东北"
+        ],
+        "signature_dishes": [
+          "东北铁锅炖",
+          "锅包肉"
+        ],
+        "verification_status": "lead",
+        "last_checked": "2026-07-08",
+        "source_ids": [
+          "xiaohongshu-manchester-leads"
+        ],
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Meishi%20Meike%20%E7%BE%8E%E6%97%B6%E7%BE%8E%E5%AE%A2%20Manchester%2C%20exact%20address%20to%20verify%20Manchester",
+        "data_note": "Xiaohongshu food diary posts mention 美时美客 as a Northeast iron-pot-stew lead. Exact address, current opening status and menu require verification."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.2532386,
+          53.4797376
+        ]
+      },
+      "properties": {
+        "id": "tattu",
+        "name": "Tattu Manchester",
+        "area": "3 Hardman Square / Spinningfields",
+        "province_links": [
+          "广东",
+          "香港"
+        ],
+        "cuisine_categories": [
+          "Cantonese / 粤菜",
+          "Family Memory / 家族记忆"
+        ],
+        "signature_dishes": [
+          "现代点心",
+          "黑椒牛肉"
+        ],
+        "verification_status": "verified",
+        "last_checked": "2026-07-08",
+        "source_ids": [
+          "osm-overpass",
+          "tattu"
+        ],
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Tattu%20Manchester%203%20Hardman%20Square%20%2F%20Spinningfields%20Manchester",
+        "data_note": "Official website confirms the Manchester address and positions the restaurant as modern Chinese and Japanese cuisine; regional labels here are interpretive."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.239299,
+          53.4786454
+        ]
+      },
+      "properties": {
+        "id": "mr-hong-beef-noodle",
+        "name": "Mr Hong Beef Noodle",
+        "area": "43 Faulkner Street / Chinatown",
+        "province_links": [
+          "陕西"
+        ],
+        "cuisine_categories": [
+          "Noodles & Rice / 米面主食"
+        ],
+        "signature_dishes": [
+          "牛肉汤面",
+          "麻辣牛肉面"
+        ],
+        "verification_status": "verified",
+        "last_checked": "2026-07-08",
+        "source_ids": [
+          "osm-overpass"
+        ],
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Mr%20Hong%20Beef%20Noodle%2043%20Faulkner%20Street%20%2F%20Chinatown%20Manchester",
+        "data_note": "Added from OpenStreetMap public POI data; the map uses it as a north-western noodle-culture example pending menu verification."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.2391457,
+          53.4671454
+        ]
+      },
+      "properties": {
+        "id": "peace-garden",
+        "name": "Peace Garden",
+        "area": "57 Booth Street West",
+        "province_links": [
+          "广东",
+          "香港"
+        ],
+        "cuisine_categories": [
+          "Cantonese / 粤菜",
+          "Family Memory / 家族记忆"
+        ],
+        "signature_dishes": [
+          "宫保豆腐",
+          "素炒面"
+        ],
+        "verification_status": "verified",
+        "last_checked": "2026-07-08",
+        "source_ids": [
+          "osm-overpass"
+        ],
+        "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Peace%20Garden%2057%20Booth%20Street%20West%20Manchester",
+        "data_note": "Added from OpenStreetMap public POI data; vegetarian-friendly examples are representative and require menu checks."
+      }
+    }
+  ]
+}

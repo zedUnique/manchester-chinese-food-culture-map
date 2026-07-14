@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manchester Chinese Food Culture Map</title>
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="icon" type="image/png" href="./assets/brand/university-of-manchester-logo.png?v=purple" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIINfQZkBChjEdJ7CtwQRuUq4h+FrotoioU="
+      crossorigin=""
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
+    <link rel="stylesheet" href="./styles.css?v=20260714-academic-disclaimer" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="#province-map" aria-label="Back to the China map">
+          <span class="brand-mark"><img src="./assets/brand/university-of-manchester-logo.png?v=purple" alt="The University of Manchester" /></span>
+          <span class="brand-divider" aria-hidden="true"></span>
+          <span class="brand-copy">
+            <strong>Manchester Chinese Food Culture Map</strong>
+            <small>Chinese regions and local restaurants</small>
+            <span class="academic-disclaimer">Student academic project, not an official University website.</span>
+          </span>
+        </a>
+        <div class="toolbar" aria-label="Page tools">
+          <label class="search-box">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
+            <span class="visually-hidden">Search</span>
+            <input id="searchInput" type="search" placeholder="region, restaurant, dish" autocomplete="off" />
+          </label>
+          <button class="icon-button" id="resetButton" type="button" title="Reset view" aria-label="Reset view">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg>
+          </button>
+          <button class="source-button" id="sourceButton" type="button">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 5.5A3.5 3.5 0 0 1 6 2h5v18H6a3.5 3.5 0 0 0-3.5 2V5.5Z"/><path d="M21.5 5.5A3.5 3.5 0 0 0 18 2h-5v18h5a3.5 3.5 0 0 1 3.5 2V5.5Z"/></svg>
+            <span>Sources</span>
+          </button>
+          <button class="source-button" id="methodButton" type="button">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3h6M10 3v6l-5.5 9.5A1.7 1.7 0 0 0 6 21h12a1.7 1.7 0 0 0 1.5-2.5L14 9V3"/><path d="M8 15h8"/></svg>
+            <span>Method</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="workspace">
+        <section class="china-panel" aria-labelledby="china-title">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow"><span>01</span> China food regions</p>
+              <h1 id="china-title">Start from a Chinese food region, then find its Manchester links</h1>
+            </div>
+            <span class="count-pill" id="provinceCount"></span>
+          </div>
+
+          <div class="china-map-wrap" id="province-map">
+            <svg class="china-map" viewBox="0 0 660 430" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="mapTitle mapDesc">
+              <title id="mapTitle">Interactive China food-region map prototype</title>
+              <desc id="mapDesc">Select a regional marker to view food culture, Manchester restaurants and signature dishes.</desc>
+              <image class="china-boundary-image" href="./data/china-boundary.svg" width="660" height="430" />
+              <g id="provinceButtons"></g>
+            </svg>
+          </div>
+        </section>
+
+        <section class="manchester-panel" aria-labelledby="manchester-title">
+          <div class="panel-heading compact">
+            <div>
+              <p class="eyebrow"><span>02</span> Manchester places</p>
+              <h2 id="manchester-title">Manchester restaurant map</h2>
+            </div>
+            <span class="route-label" id="routeLabel">China → Manchester</span>
+          </div>
+
+          <div class="city-map-wrap">
+            <div id="leafletMap" class="leaflet-map" role="application" aria-label="Manchester Chinese food culture point map"></div>
+            <svg id="fallbackCityMap" class="city-map" viewBox="0 0 640 440" role="img" aria-labelledby="cityTitle cityDesc">
+              <title id="cityTitle">Manchester restaurant point map</title>
+              <desc id="cityDesc">Shows Manchester restaurant locations related to the selected region.</desc>
+              <rect class="city-ground" x="28" y="28" width="584" height="384" rx="22" />
+              <path class="city-water" d="M72 368 C160 334 177 250 246 227 C320 202 345 137 419 111 C467 94 517 73 573 50" />
+              <path class="city-road primary" d="M92 210 L563 210" />
+              <path class="city-road" d="M173 75 L482 361" />
+              <path class="city-road" d="M253 372 L396 76" />
+              <path class="city-road" d="M102 318 C206 289 269 315 360 280 C438 250 488 274 558 235" />
+              <text class="district-label" x="258" y="196">Chinatown</text>
+              <text class="district-label" x="390" y="118">Northern Quarter</text>
+              <text class="district-label" x="135" y="292">Oxford Road</text>
+              <text class="district-label" x="438" y="287">Piccadilly</text>
+              <g id="restaurantMarkers"></g>
+            </svg>
+          </div>
+
+        </section>
+
+        <aside class="detail-panel" aria-labelledby="details-title">
+          <div class="panel-heading compact">
+            <div>
+              <p class="eyebrow"><span>03</span> Food and culture</p>
+              <h2 id="details-title">Cuisine, restaurants and signature dishes</h2>
+            </div>
+          </div>
+          <div class="detail-layout">
+            <section class="culture-column" aria-label="Selected regional cuisine and filters">
+              <div class="province-story" id="provinceStory" aria-live="polite"></div>
+
+              <div class="filter-panel" aria-label="Cultural category filter">
+                <div class="filter-heading">
+                  <span>Cultural category</span>
+                  <button id="clearCuisineButton" type="button">All</button>
+                </div>
+                <div class="filter-chips" id="cuisineFilters"></div>
+              </div>
+
+              <div class="filter-panel dietary-filter-panel" aria-label="Dietary caution filter">
+                <div class="filter-heading">
+                  <span>Dietary caution</span>
+                  <button id="clearDietaryButton" type="button">Clear</button>
+                </div>
+                <div class="filter-chips dietary-chips" id="dietaryFilters"></div>
+                <p class="dietary-filter-note">Recorded risks only. Always confirm allergens, stock, cooking wine, halal status and cross-contact with the restaurant.</p>
+              </div>
+
+              <div class="legend" id="mapLegend"></div>
+            </section>
+
+            <section class="restaurant-column" aria-label="Selected restaurant and dishes">
+              <div class="active-path" id="activePath"></div>
+              <div class="story-panel" id="storyPanel"></div>
+              <div class="restaurant-list" id="restaurantList"></div>
+            </section>
+          </div>
+        </aside>
+      </main>
+    </div>
+
+    <dialog class="dish-dialog" id="dishDialog" aria-labelledby="dishTitle">
+      <button class="dialog-close" id="dialogClose" type="button" aria-label="Close">×</button>
+      <div id="dishDialogBody"></div>
+    </dialog>
+
+    <aside class="source-drawer" id="sourceDrawer" aria-label="Sources">
+      <div class="source-card">
+        <button class="dialog-close" id="sourceClose" type="button" aria-label="Close sources">×</button>
+        <p class="eyebrow">Research Notes</p>
+        <h2>Sources and data notes</h2>
+        <p>Restaurant and dish information is currently prototype data. Chinese-language sources are used to verify dish appearance and terminology. Third-party photographs are attributed and used only as academic visual references; obtain permission or replace them with fieldwork photographs before public deployment.</p>
+        <ul id="sourceList"></ul>
+      </div>
+    </aside>
+
+    <aside class="source-drawer" id="methodDrawer" aria-label="Method notes">
+      <div class="source-card">
+        <button class="dialog-close" id="methodClose" type="button" aria-label="Close method notes">×</button>
+        <p class="eyebrow">Methodology</p>
+        <h2>Project methodology</h2>
+        <div id="methodBody"></div>
+      </div>
+    </aside>
+
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+    <script src="./data.js?v=20260714-chinese-image-audit"></script>
+    <script src="./app.js?v=20260714-chinese-image-audit"></script>
+  </body>
+</html>

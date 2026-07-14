@@ -1,0 +1,7 @@
+.DS_Store
+node_modules/
+reference/
+*.docx
+*.pdf
+*.mp4
+
