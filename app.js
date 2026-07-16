@@ -957,7 +957,7 @@ function renderProvinceStory() {
       </div>
       <div class="bridge-note">
         <strong>Manchester links</strong>
-        <span>${restaurants.length ? restaurants.map((restaurant) => restaurant.name).join(" / ") : "To be explored: this demo does not yet include a verified Manchester restaurant point for this region."}</span>
+        <span>${restaurants.length ? restaurants.map((restaurant) => restaurant.name).join(" / ") : "No verified Manchester restaurant point is currently recorded for this region."}</span>
       </div>
     </div>
   `;
@@ -1147,7 +1147,7 @@ function renderExplorationCards(province) {
   return `
     <div class="empty-state">
       <strong>Manchester restaurant points to be explored</strong>
-      <p>This demo has not yet recorded a verified restaurant coordinate for this region. Later versions can add evidence from OpenStreetMap, restaurant websites, public map data and fieldwork.</p>
+      <p>No verified Manchester restaurant coordinate is currently recorded for this region. Any future addition should be supported by public map data, restaurant information or fieldwork.</p>
     </div>
     ${dishes
       .map(
@@ -1261,7 +1261,7 @@ function renderStoryPanel(restaurant, dish) {
         </section>
         <section>
           <h4>Data status</h4>
-          <p>No reliable Manchester restaurant point has been recorded for this region yet. Future work should verify coordinates, menus and cultural descriptions through OSM/Overpass, restaurant websites, public maps and fieldwork.</p>
+          <p>No reliable Manchester restaurant point has been recorded for this region. New entries should be checked against OSM/Overpass, restaurant websites, public maps or fieldwork before they are added.</p>
         </section>
       </article>
     `;
@@ -1280,7 +1280,7 @@ function renderStoryPanel(restaurant, dish) {
         <strong>Dietary / allergy caution</strong>
         <div class="dietary-mini">${dishDietaryChips(dish) || "<span>Ask restaurant</span>"}</div>
         ${dishDietaryNote(dish) ? `<p class="dietary-context">${dishDietaryNote(dish)}</p>` : ""}
-        <p>Prototype guidance only. Users with allergies, religious restrictions or strict diets should confirm ingredients, cooking wine, stock and cross-contact with the restaurant.</p>
+        <p>Dietary guidance is indicative only. Users with allergies, religious restrictions or strict diets should confirm ingredients, cooking wine, stock and cross-contact with the restaurant.</p>
       </div>
       <dl class="poi-meta">
         <div><dt>Restaurant</dt><dd>${restaurant.name}</dd></div>
@@ -1319,7 +1319,7 @@ function openDishDialog(restaurant, dish) {
       <strong>Dietary / allergy caution</strong>
       <div class="dietary-mini">${dishDietaryChips(dish) || "<span>Ask restaurant</span>"}</div>
       ${dishDietaryNote(dish) ? `<p class="dietary-context">${dishDietaryNote(dish)}</p>` : ""}
-      <p>Prototype guidance only. Please confirm ingredients, halal status, cooking wine, stock and cross-contact with the restaurant.</p>
+      <p>Dietary guidance is indicative only. Please confirm ingredients, halal status, cooking wine, stock and cross-contact with the restaurant.</p>
     </div>
     <section>
       <h3>How it is typically made</h3>

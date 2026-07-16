@@ -1883,6 +1883,12 @@ h2 {
 
   #methodButton {
     grid-column: 2;
+    justify-content: center;
+    padding-inline: 0;
+  }
+
+  #methodButton span {
+    display: none;
   }
 
   .source-button {

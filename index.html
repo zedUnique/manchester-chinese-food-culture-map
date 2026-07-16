@@ -4,7 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Manchester Chinese Food Culture Map</title>
+    <meta name="description" content="A student Web GIS project connecting Chinese regional foodways with Chinese restaurants and dishes in Manchester." />
+    <meta name="author" content="Bowen Zhang" />
+    <meta name="application-name" content="Manchester Chinese Food Culture Map" />
+    <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#ffffff" />
+    <link rel="canonical" href="https://zedunique.github.io/manchester-chinese-food-culture-map/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Manchester Chinese Food Culture Map" />
+    <meta property="og:title" content="Manchester Chinese Food Culture Map" />
+    <meta property="og:description" content="Explore Chinese regional foodways through Manchester restaurants, dishes and cultural stories." />
+    <meta property="og:url" content="https://zedunique.github.io/manchester-chinese-food-culture-map/" />
+    <meta name="twitter:card" content="summary" />
     <link rel="icon" type="image/png" href="./assets/brand/university-of-manchester-logo.png?v=purple" />
     <link
       rel="stylesheet"
@@ -14,7 +25,7 @@
     />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
-    <link rel="stylesheet" href="./styles.css?v=20260714-drawer-stack" />
+    <link rel="stylesheet" href="./styles.css?v=20260716-english-polish-2" />
   </head>
   <body>
     <div class="app-shell">
@@ -61,7 +72,7 @@
 
           <div class="china-map-wrap" id="province-map">
             <svg class="china-map" viewBox="0 0 660 430" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="mapTitle mapDesc">
-              <title id="mapTitle">Interactive China regional-foodway map prototype</title>
+              <title id="mapTitle">Interactive China regional-foodway map</title>
               <desc id="mapDesc">Select one of thirteen research-led foodway entries to view food culture, Manchester restaurants and signature dishes.</desc>
               <image class="china-boundary-image" href="./data/china-boundary.svg" width="660" height="430" />
               <g id="provinceButtons"></g>
@@ -142,7 +153,7 @@
         <button class="dialog-close" id="sourceClose" type="button" aria-label="Close sources">×</button>
         <p class="eyebrow">Research Notes</p>
         <h2>Sources and data notes</h2>
-        <p>Restaurant and dish information is currently prototype data. Chinese-language sources are used to verify dish appearance and terminology. Third-party photographs are attributed and used only as academic visual references; obtain permission or replace them with fieldwork photographs before public deployment.</p>
+        <p>Restaurant and dish records are compiled from public sources, restaurant information and fieldwork leads. Chinese-language sources are used to check dish names, appearance and terminology. Photographs are credited to their source or rights holder and are included as academic visual references.</p>
         <ul id="sourceList"></ul>
       </div>
     </aside>
@@ -162,7 +173,7 @@
       crossorigin=""
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
-    <script src="./data.js?v=20260714-drawer-stack"></script>
-    <script src="./app.js?v=20260714-drawer-stack"></script>
+    <script src="./data.js?v=20260716-english-polish"></script>
+    <script src="./app.js?v=20260716-english-polish"></script>
   </body>
 </html>

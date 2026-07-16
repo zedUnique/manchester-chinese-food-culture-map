@@ -10,7 +10,7 @@ This project should be framed as a Web GIS-based cultural mapping application, n
 - Guo Cheng: useful for Manchester cultural POI mapping, restaurant/grocery POI categories, cultural filters, search and pop-up design.
 - Zhaolin Fang: useful for map-linked narrative panels, tooltip interaction, right-side information panels and structured functional testing.
 
-## Current Prototype Structure
+## Current Project Structure
 
 - Chinese province entry point: users start from a regional food culture perspective.
 - The China map uses thirteen research-led regional foodway entries rather than claiming an official thirteen-cuisine division. It keeps all traditions in the canonical Eight Great Cuisines visible, then adds city, ethnic and macro-regional foodways needed for Manchester evidence and communication with non-Chinese users.
@@ -25,4 +25,4 @@ This project should be framed as a Web GIS-based cultural mapping application, n
 
 - Functional testing: regional entry selection, dietary filtering, map marker selection, search, story panel and source drawer.
 - Non-functional testing: mobile layout, loading fallback, readability and accessibility.
-- User evaluation: ask non-Chinese users whether the prototype helps them understand that Chinese food is regionally diverse.
+- User evaluation: ask non-Chinese users whether the project helps them understand that Chinese food is regionally diverse.

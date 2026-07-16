@@ -1,73 +1,105 @@
-# Manchester Chinese Food Culture Interactive Map
+# Manchester Chinese Food Culture Map
 
-这是一个毕业设计展示用的完整交互原型：用户先从中国饮食地区进入，再定位到曼城相关中餐馆，最后查看餐馆代表菜、做法参考、口味描述、文化故事及饮食注意事项。
+An academic Web GIS project by Bowen Zhang that connects Chinese regional foodways with Chinese restaurants in Manchester. The map is designed for people who may know individual Chinese dishes but are less familiar with the regional histories, ingredients and dining practices behind them.
 
-项目定位是 Web GIS-based cultural mapping application，而不是普通餐馆推荐网站。
+**Live project:** [zedunique.github.io/manchester-chinese-food-culture-map](https://zedunique.github.io/manchester-chinese-food-culture-map/)
 
-## 在线访问
+This is a student academic project, not an official University of Manchester website.
 
-公开演示地址：<https://zedunique.github.io/manchester-chinese-food-culture-map/>
+## Project Aim
 
-本网站是学生学术项目，并非曼彻斯特大学官方网站。
+The project treats restaurants as cultural points of interest rather than ranking them as recommendations. A user begins with a regional foodway on the China map, sees related restaurants in Manchester, and then opens individual dishes to read about preparation, flavour and cultural context.
 
-## 启动与关闭
+The intended research question is:
 
-在项目文件夹中运行：
+> How can Manchester's Chinese restaurants help non-Chinese users understand the regional, historical and social diversity of Chinese food?
+
+## How the Map Works
+
+1. Select one of the regional foodway entries on the China map.
+2. View Manchester restaurants connected with that entry.
+3. Select a restaurant and open one of its dishes.
+4. Read the dish method, flavour profile, cultural background and dietary cautions.
+5. Use the dietary filters to identify recorded risks or vegetarian options.
+
+The Manchester map supports marker clustering, zooming and the separation of nearby restaurant points. Restaurant cards link to Google Maps for current public ratings and reviews.
+
+## Regional Framework
+
+The interface contains 13 research-led entries. They are not presented as an official set of 13 Chinese cuisines. The framework keeps the traditions commonly described as the Eight Great Cuisines visible, then adds selected city, ethnic and wider regional foodways that are relevant to the Manchester dataset and to communication with non-Chinese users.
+
+Sichuan and Chongqing are combined under the Chuan tradition. Jiangsu and Zhejiang are presented as a clearly labelled Su-Zhe entry. Northwest and Yunnan-Guizhou include scope notes because the current content is mainly Shaanxi-led and Yunnan-led.
+
+The full rationale and academic sources are documented in [REGIONAL_FRAMEWORK.md](REGIONAL_FRAMEWORK.md).
+
+## Current Scope
+
+- 13 regional foodway entries
+- 27 Manchester restaurant records
+- 87 dish records
+- 56 research and data sources
+- restaurant verification labels and checked dates
+- dietary filters for vegetarian options and recorded pork, beef, seafood, gluten, peanut or sesame, alcohol, soy, egg, dairy and poultry risks
+- source captions and fallbacks for dish photographs
+- direct links to current Google Maps ratings and reviews
+
+Automatic Google Places rating requests are disabled. The public site does not require an API key and does not generate paid Google Places requests.
+
+## Run Locally
+
+From the project folder, run:
 
 ```bash
 python3 -m http.server 4173
 ```
 
-然后打开：
+Then open:
 
 ```text
 http://localhost:4173
 ```
 
-服务器运行时，终端会停留在日志界面，这是正常状态。关闭时回到该终端按 `Control + C`。本项目不会自行在后台启动服务器。
+The terminal remains attached to the local server while it is running. Press `Control + C` in that terminal to stop it. If port 4173 is already in use, either open the existing local address or start the server on another port.
 
-如果出现 `Address already in use`，说明 4173 端口已经有服务器运行，不需要重复启动；可以直接打开上面的地址。
+## Validate the Data
 
-## 当前功能
-
-- 13 个研究导向的中国区域饮食文化入口；它们覆盖传统八大菜系并补充曼城文化叙事需要的城市、民族和跨区域饮食文化，但并非“官方十三大菜系”。
-- 入口以区域菜系研究为基础，并根据曼城餐厅证据、文化差异和面向非中国用户的可理解性进行合并或保留。
-- 地域饮食传统采用有来源依据的分类，不再把火锅、麻辣烫、米面或家族记忆与地域菜系混在同一层级。
-- 中国地图与曼城地图并列，餐厅标点支持聚合、放大和同址展开。
-- 餐厅、菜品、口味、做法与文化故事联动。
-- 素食选项，以及猪肉、牛肉、海鲜、麸质、花生/芝麻、酒精、豆类、蛋、奶类和禽类筛选。
-- 餐厅资料显示“已核实、部分核实、发现线索”状态及检查日期。
-- 菜品图片显示来源；加载失败时自动显示说明卡，不用错误图片替代。
-- 每家餐厅可直接打开 Google Maps 查看当前真实评分和用户评价。
-
-Google 自动评分读取目前保持关闭，因此项目无需 API 密钥，也不会因为浏览演示页面产生 Google Places API 请求。后续只有在配置受限密钥、配额和数据政策后才应启用自动读取。
-
-## 项目结构
-
-- `index.html`：页面结构
-- `styles.css`：视觉设计与响应式布局
-- `data.js`：省份、餐馆、菜品和资料来源数据
-- `app.js`：点击、搜索、地图联动和弹窗交互
-- `assets/dishes/`：项目内保存的菜品实拍参考图
-- `data/restaurants.geojson`：由主数据自动生成的餐馆 POI 数据
-- `tools/validate-data.mjs`：检查数据引用并重新生成 GeoJSON
-- `PROJECT_NOTES.md`：阅读参考论文后的项目设计记录
-- `REGIONAL_FRAMEWORK.md`：13 个区域饮食文化入口的论文依据、选择标准、对应关系和局限
-
-## 修改数据后的检查
-
-如果电脑已安装 Node.js，在项目文件夹运行：
+With Node.js installed, run:
 
 ```bash
 npm test
 npm run export:geojson
 ```
 
-第一条检查餐厅、地区、来源、饮食标签和图片映射；第二条更新 `data/restaurants.geojson`。当前数据包含 27 家餐厅和 85 条菜品记录。
+`npm test` checks regional references, restaurants, sources, dietary profiles and image mappings. `npm run export:geojson` regenerates `data/restaurants.geojson` from the main dataset.
 
-## 后续重点
+## Project Files
 
-1. 把 `data.js` 里的餐馆和菜品替换成你实地调研后的最终版本。
-2. 如果需要更学术，可以给每道菜增加访谈摘录、图片、参考文献编号。
-3. 继续核实“发现线索”状态的餐厅地址、营业情况和当前菜单。
-4. 在设置严格配额后，再决定是否自动读取 Google 评分；目前的外部链接方案更适合无费用风险的毕业设计演示。
+- `index.html` - page structure and public project copy
+- `styles.css` - visual design and responsive layout
+- `data.js` - regional entries, restaurants, dishes and sources
+- `app.js` - map interaction, search, filters and story panels
+- `assets/dishes/` - locally stored dish reference images
+- `data/restaurants.geojson` - exported restaurant point data
+- `tools/validate-data.mjs` - data checks and GeoJSON export
+- `PROJECT_NOTES.md` - design notes drawn from the reference dissertations
+- `REGIONAL_FRAMEWORK.md` - academic basis, selection criteria and limitations
+
+## Data and Image Notes
+
+Restaurant menus, addresses and opening status can change. Records marked as discovery leads or partially verified should be checked through fieldwork, current menus or official restaurant information before the final dissertation submission.
+
+Dietary labels record known or likely ingredients; they are not an allergy or halal guarantee. Users should confirm stock, sauces, cooking wine and cross-contact directly with the restaurant.
+
+Third-party photographs are credited to their source or rights holder and are used as academic visual references. Original fieldwork photography remains the preferred option for the final submitted project.
+
+## Next Priorities
+
+- verify the remaining discovery leads and incomplete restaurant addresses
+- replace generic or repeated dish photographs with fieldwork or restaurant-specific images
+- test the map with non-Chinese participants and record whether the regional structure is understandable
+- review keyboard navigation, mobile readability and dietary-filter wording through user testing
+- consider live Google rating data only if API key restrictions, quotas and cost controls are in place
+
+## Academic Status
+
+Created by Bowen Zhang as a student dissertation project. It is independent academic work and is not an official University of Manchester service or publication.
