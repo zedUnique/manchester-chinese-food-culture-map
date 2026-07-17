@@ -46,6 +46,35 @@ const els = {
 const byId = (items, id) => items.find((item) => item.id === id);
 const provinceLabel = (province) => province.englishName || province.name;
 const dishLabel = (dish) => dish.englishName || dish.name;
+const regionLabelsInEnglish = {
+  "川渝": "Sichuan-Chongqing",
+  "北京": "Beijing",
+  "云南": "Yunnan",
+  "广东": "Guangdong",
+  "香港": "Hong Kong",
+  "湖南": "Hunan",
+  "东北": "Northeast",
+  "川味源流": "Sichuan origins",
+  "潮汕": "Chaoshan",
+  "陕西": "Shaanxi"
+};
+const regionLabelInEnglish = (label) => regionLabelsInEnglish[label] || label;
+const restaurantRegionLabels = (restaurant) => restaurant.provinceLinks.map(regionLabelInEnglish);
+const provinceMarkerLabels = {
+  xinjiang: ["Xinjiang"],
+  chuanyu: ["Sichuan", "Chongqing"],
+  shaanxi: ["North", "west"],
+  hunan: ["Hunan"],
+  guangdong: ["Guang", "dong"],
+  hongkong: ["Hong", "Kong"],
+  beijing: ["Beijing"],
+  shandong: ["Shan", "dong"],
+  jiangnan: ["Jiangsu", "Zhejiang"],
+  anhui: ["Anhui"],
+  fujian: ["Fujian"],
+  yunnan: ["Yunnan", "Guizhou"],
+  dongbei: ["North", "east"]
+};
 const dishImageLibrary = [
   {
     id: "mapo-tofu",
@@ -692,7 +721,7 @@ function filteredRestaurants() {
 
   return base.filter((restaurant) => {
     const dishText = restaurant.dishes.map((dish) => `${dish.name} ${dish.englishName} ${dish.tags.join(" ")}`).join(" ");
-    const haystack = `${restaurant.name} ${restaurant.area} ${restaurant.description} ${restaurant.provinceLinks.join(" ")} ${dishText}`.toLowerCase();
+    const haystack = `${restaurant.name} ${restaurant.area} ${restaurant.description} ${restaurant.provinceLinks.join(" ")} ${restaurantRegionLabels(restaurant).join(" ")} ${dishText}`.toLowerCase();
     return haystack.includes(term);
   });
 }
@@ -905,11 +934,14 @@ function renderProvinceButtons() {
     .map((province) => {
       const isActive = province.id === state.provinceId;
       const radius = isActive ? 28 : 21;
+      const markerLines = provinceMarkerLabels[province.id] || [provinceLabel(province)];
+      const firstLineY = province.y - ((markerLines.length - 1) * 8) / 2 + 3;
       return `
         <g class="province-node ${isActive ? "is-active" : ""}" data-province="${province.id}" tabindex="0" role="button" aria-label="Select ${provinceLabel(province)}">
           <circle cx="${province.x}" cy="${province.y}" r="${radius}" fill="${province.color}" />
-          <text class="province-name" x="${province.x}" y="${province.y - 2}" text-anchor="middle">${province.mapName || province.name}</text>
-          <text class="province-en" x="${province.x}" y="${province.y + 14}" text-anchor="middle">${province.markerEnglishName || province.englishName}</text>
+          <text class="province-name" x="${province.x}" text-anchor="middle">
+            ${markerLines.map((line, index) => `<tspan x="${province.x}" y="${firstLineY + index * 8}">${line}</tspan>`).join("")}
+          </text>
         </g>
       `;
     })
@@ -1192,7 +1224,7 @@ function renderRestaurantCard(restaurant) {
             ${restaurant.lastChecked ? `<small>Checked ${restaurant.lastChecked}</small>` : ""}
           </div>
         </div>
-        <span>${restaurant.provinceLinks.join(" / ")}</span>
+        <span>${restaurantRegionLabels(restaurant).join(" / ")}</span>
       </div>
       <div class="category-row">
         ${categories.map((category) => `<span style="--category-color:${category.color}">${category.label}</span>`).join("")}

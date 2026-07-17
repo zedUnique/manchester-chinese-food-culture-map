@@ -714,15 +714,13 @@ h2 {
 
 .province-node text {
   fill: #fff;
-  font-size: 13px;
+  font-size: 7.5px;
   font-weight: 800;
   pointer-events: none;
 }
 
-.province-node .province-en {
-  font-size: 6px;
-  font-weight: 700;
-  opacity: 0.88;
+.province-node.is-active text {
+  font-size: 8px;
 }
 
 .story-card {
