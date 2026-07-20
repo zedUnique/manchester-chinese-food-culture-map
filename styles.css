@@ -2,12 +2,15 @@
   color-scheme: light;
   --ink: #1d1d1f;
   --muted: #6e6e73;
-  --paper: #f4f7fb;
-  --panel: #ffffff;
-  --panel-cool: #f8fbff;
-  --line: #c7d4e0;
-  --line-soft: #d5e0e9;
-  --line-strong: #aebfce;
+  --paper: #f0f4f7;
+  --panel: #fbfcfd;
+  --panel-cool: #f5f8fb;
+  --line: #aebdca;
+  --line-soft: #c3cfd9;
+  --line-strong: #899eaf;
+  --brand-line: #9b85aa;
+  --brand-line-soft: #c8bdd0;
+  --brand-line-strong: #826794;
   --accent: #68aee6;
   --accent-strong: #347fbd;
   --accent-soft: #eaf5ff;
@@ -77,9 +80,9 @@ a {
   gap: 16px;
   margin-bottom: 16px;
   padding: 11px 14px;
-  border: 1px solid var(--line);
+  border: 1px solid var(--brand-line);
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.92);
+  background: rgba(251, 252, 253, 0.96);
   box-shadow: 0 6px 20px rgba(49, 78, 107, 0.08);
   backdrop-filter: blur(20px) saturate(140%);
 }
@@ -273,7 +276,7 @@ a {
   position: relative;
   min-width: 0;
   background: var(--panel);
-  border: 1px solid var(--line);
+  border: 1px solid var(--brand-line);
   border-radius: 8px;
   box-shadow: var(--shadow);
   overflow: hidden;
@@ -314,7 +317,7 @@ a {
   align-items: start;
   margin: -16px -16px 14px;
   padding: 16px 16px 13px;
-  border-bottom: 1px solid var(--line);
+  border-bottom: 1px solid var(--brand-line-soft);
   background: #fbfdff;
 }
 
@@ -325,7 +328,7 @@ a {
   right: 0;
   left: 0;
   height: 3px;
-  background: #9bc9ee;
+  background: var(--brand-line-strong);
 }
 
 .panel-heading.compact {
@@ -402,7 +405,7 @@ h2 {
 .route-label {
   flex: 0 0 auto;
   padding: 6px 9px;
-  border: 1px solid #bfd9ec;
+  border: 1px solid #a9c7dd;
   border-radius: 6px;
   background: #f2f8fd;
   color: #48799f;
@@ -412,7 +415,7 @@ h2 {
 }
 
 .route-label {
-  border-color: #bfd9ec;
+  border-color: #a9c7dd;
   background: #edf7ff;
   color: #3d78a8;
 }
@@ -421,7 +424,7 @@ h2 {
 .city-map-wrap {
   position: relative;
   overflow: hidden;
-  border: 1px solid var(--line-strong);
+  border: 1px solid var(--brand-line-strong);
   border-radius: 8px;
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.72), var(--soft-shadow);
 }
