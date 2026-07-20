@@ -1356,7 +1356,7 @@ const FOOD_MAP_DATA = {
     },
     {
       id: "chinese-culinary-regionalism-2020",
-      label: "Swislocki (2020): Special Issue on Chinese Culinary Regionalism",
+      label: "King (2020): Special Issue on Chinese Culinary Regionalism: Introduction",
       url: "https://doi.org/10.1080/20549547.2020.1770490",
       note: "Used to recognise that Chinese food identities can be organised by province, city and ethnic region, and that the canonical four- or eight-cuisine lists do not cover every tradition represented in this project."
     },

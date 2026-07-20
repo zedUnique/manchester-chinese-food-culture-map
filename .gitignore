@@ -4,4 +4,5 @@ reference/
 *.docx
 *.pdf
 *.mp4
-
+dissertation/
+tools/build_dissertation_draft.py
