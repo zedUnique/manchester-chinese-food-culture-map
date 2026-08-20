@@ -485,6 +485,103 @@ const dishImageLibrary = [
     source: "Zheng Zhou / Wikimedia Commons (CC BY-SA 4.0)",
     sourceUrl: "https://commons.wikimedia.org/wiki/File:Hairy_Tofu.jpg",
     caption: "Verified Huizhou dish reference"
+  },
+  {
+    id: "happy-seasons-haaland-special-reference",
+    url: "./assets/dishes/final-update/happy-seasons-haaland-special.jpg",
+    source: "Student-curated reference image",
+    caption: "Roast-meat visual reference",
+    referenceType: "general"
+  },
+  {
+    id: "xiongqi-mala-yuanyang-hotpot-reference",
+    url: "./assets/dishes/final-update/xiongqi-mala-yuanyang-hotpot.jpg",
+    source: "Student-curated reference image",
+    caption: "Twin-broth mala hot-pot reference"
+  },
+  {
+    id: "tai-wu-roast-duck-ho-fun-reference",
+    url: "./assets/dishes/final-update/tai-wu-roast-duck-ho-fun.jpg",
+    source: "Student-curated reference image",
+    caption: "Roast-duck rice-noodle visual reference",
+    referenceType: "general"
+  },
+  {
+    id: "oneplus-individual-hotpot-format-reference",
+    url: "./assets/dishes/final-update/oneplus-individual-hotpot-format.jpg",
+    source: "Student-curated reference image",
+    caption: "One+ individual hot-pot service-format reference",
+    referenceType: "general"
+  },
+  {
+    id: "mr-hong-beef-noodle-soup-reference",
+    url: "./assets/dishes/final-update/mr-hong-beef-noodle-soup.jpg",
+    source: "Student-curated reference image",
+    caption: "Beef noodle soup reference"
+  },
+  {
+    id: "xiang-zhi-wei-chopped-chilli-fish-reference",
+    url: "./assets/dishes/final-update/xiang-zhi-wei-chopped-chilli-fish.jpg",
+    source: "Student-curated reference image",
+    caption: "Chopped-chilli whole-fish reference"
+  },
+  {
+    id: "no8-yuanyang-hotpot-reference",
+    url: "./assets/dishes/final-update/no8-yuanyang-hotpot.jpg",
+    source: "Student-curated reference image",
+    caption: "Twin-broth hot-pot reference"
+  },
+  {
+    id: "peace-garden-kung-pao-tofu-reference",
+    url: "./assets/dishes/final-update/peace-garden-kung-pao-tofu.jpg",
+    source: "Student-curated reference image",
+    caption: "Kung pao tofu reference"
+  },
+  {
+    id: "mei-dim-shrimp-siu-mai-reference",
+    url: "./assets/dishes/final-update/mei-dim-shrimp-siu-mai.jpg",
+    source: "Student-curated reference image",
+    caption: "Shrimp siu mai component reference",
+    referenceType: "general"
+  },
+  {
+    id: "only-yu-red-rice-roll-reference",
+    url: "./assets/dishes/final-update/only-yu-red-rice-roll.jpg",
+    source: "Student-curated reference image",
+    caption: "Red rice-roll component reference",
+    referenceType: "general"
+  },
+  {
+    id: "chuan-yun-xuan-knife-cut-noodles-reference",
+    url: "./assets/dishes/final-update/chuan-yun-xuan-knife-cut-noodles.jpg",
+    source: "Student-curated reference image",
+    caption: "Knife-cut noodle component reference",
+    referenceType: "general"
+  },
+  {
+    id: "wings-seafood-fried-rice-reference",
+    url: "./assets/dishes/final-update/wings-seafood-fried-rice.jpg",
+    source: "Student-curated reference image",
+    caption: "Seafood fried rice reference"
+  },
+  {
+    id: "blue-eyed-panda-mixed-vegetable-tofu-reference",
+    url: "./assets/dishes/final-update/blue-eyed-panda-mixed-vegetable-tofu.jpg",
+    source: "Student-curated reference image",
+    caption: "Mixed-vegetable tofu visual reference; gluten-free status requires confirmation",
+    referenceType: "general"
+  },
+  {
+    id: "shandong-sweet-sour-carp-reference",
+    url: "./assets/dishes/final-update/shandong-sweet-sour-carp.jpg",
+    source: "Student-curated reference image",
+    caption: "Shandong-style sweet-and-sour carp reference"
+  },
+  {
+    id: "peace-garden-vegetarian-chow-mein-reference",
+    url: "./assets/dishes/final-update/peace-garden-vegetarian-chow-mein.jpg",
+    source: "Student-curated reference image",
+    caption: "Vegetarian-style chow mein reference"
   }
 ];
 
@@ -497,38 +594,36 @@ const dishImageAssignments = {
   "宜宾燃面": "yibin-ranmian",
   "歌乐山辣子鸡": "laziji",
   "辣子鸡": "laziji",
-  "麻辣鸳鸯锅": "sichuan-hotpot",
+  "麻辣鸳鸯锅": "xiongqi-mala-yuanyang-hotpot-reference",
   "重庆风味麻辣锅": "sichuan-hotpot",
-  "鸳鸯锅": "sichuan-hotpot",
-  "手工面与米饭碗": "noodle-bowl-general",
+  "鸳鸯锅": "no8-yuanyang-hotpot-reference",
+  "手工面与米饭碗": "oneplus-individual-hotpot-format-reference",
   "海鲜烧烤拼盘": "oneplus-seafood-platter",
-  "Haaland Special": "triple-roast-rice-xhs",
+  "Haaland Special": "happy-seasons-haaland-special-reference",
   "Lily Kwok's Chicken Curry": "chicken-curry-general",
   "北京烤鸭卷饼": "peking-duck-pancakes",
   "广式脆面": "cantonese-crispy-noodles-xhs",
-  "剁椒鱼": "hunan-fish-head",
+  "剁椒鱼": "xiang-zhi-wei-chopped-chilli-fish-reference",
   "小炒牛肉": "hunan-stir-fried-beef",
   "粉蒸牛肉": "steamed-beef-rice-flour",
   "干锅鸡": "dry-pot-chicken",
   "麻辣香锅": "mala-xiangguo",
-  "麻辣锅底": "sichuan-hotpot",
-  "番茄清汤锅": "hot-pot-general",
   "夫妻肺片": "fuqi-feipian",
-  "刀削面与米线": "knife-cut-noodles",
+  "刀削面与米线": "chuan-yun-xuan-knife-cut-noodles-reference",
   "跷脚牛肉": "qiaojiao-beef-manchester-xhs",
   "香辣牛肉面": "sichuan-spicy-beef-noodles",
-  "红米肠与虾饺": "dim-sum-general",
+  "红米肠与虾饺": "only-yu-red-rice-roll-reference",
   "烧腊三拼": "triple-roast-rice-xhs",
   "烧味拼盘": "triple-roast-rice-xhs",
-  "烧鸭与河粉": "roast-duck-rice-general",
+  "烧鸭与河粉": "tai-wu-roast-duck-ho-fun-reference",
   "潮汕牛肉火锅": "chaoshan-beef-hotpot",
   "手打牛肉丸": "chaoshan-beef-balls-xhs",
   "东北铁锅炖": "northeast-iron-pot-stew",
   "锅包肉": "guobaorou-general",
   "黑椒牛肉": "black-pepper-beef",
-  "牛肉汤面": "beef-noodle-soup",
+  "牛肉汤面": "mr-hong-beef-noodle-soup-reference",
   "麻辣牛肉面": "sichuan-spicy-beef-noodles",
-  "素炒面": "noodle-bowl-general",
+  "素炒面": "peace-garden-vegetarian-chow-mein-reference",
   "水煮鱼": "sichuan-boiled-fish",
   "回锅肉": "twice-cooked-pork",
   "干炒牛河": "dry-fried-beef-ho-fun",
@@ -538,7 +633,6 @@ const dishImageAssignments = {
   "炸酱面": "zhajiangmian",
   "老北京炸酱面": "zhajiangmian",
   "川渝担担面": "dandan-noodles",
-  "担担面": "dandan-noodles",
   "过桥米线": "crossing-bridge-noodles",
   "汽锅鸡": "steam-pot-chicken",
   "手抓饭": "uyghur-polu",
@@ -549,7 +643,7 @@ const dishImageAssignments = {
   "小炒黄牛肉": "hunan-stir-fried-beef",
   "茶餐厅咖喱饭": "hong-kong-curry-rice",
   "菠萝包": "pineapple-bun",
-  "糖醋鲤鱼": "sweet-sour-carp",
+  "糖醋鲤鱼": "shandong-sweet-sour-carp-reference",
   "葱烧海参": "scallion-sea-cucumber",
   "狮子头": "lions-head-meatballs",
   "佛跳墙": "buddha-jumps-wall",
@@ -561,21 +655,20 @@ const dishImageAssignments = {
   "粤式点心拼盘": "dim-sum-general",
   "家常点心拼盘": "dim-sum-general",
   "家常点心篮": "dim-sum-general",
-  "虾饺烧卖": "shrimp-siu-mai-xhs",
+  "虾饺烧卖": "mei-dim-shrimp-siu-mai-reference",
   "现代点心": "dim-sum-general",
   "烧味饭": "roast-duck-rice-general",
   "三拼烧味饭": "triple-roast-rice-xhs",
   "烧鸭饭": "roast-duck-rice-general",
   "粤式烧鸭": "roast-duck-rice-general",
   "扬州炒饭": "yangzhou-fried-rice-xhs",
-  "海鲜炒饭": "fried-rice-general",
-  "个人小火锅": "hot-pot-general",
+  "海鲜炒饭": "wings-seafood-fried-rice-reference",
+  "个人小火锅": "oneplus-individual-hotpot-format-reference",
   "杨国福菌菇汤麻辣烫": "yang-guo-fu-mushroom-broth",
   "杨国福番茄汤麻辣烫": "yang-guo-fu-tomato-broth",
-  "麻酱麻辣烫": "malatang",
   "椒盐豆腐": "salt-pepper-tofu-xhs",
-  "无麸质杂菜豆腐": "mixed-vegetable-tofu-xhs",
-  "宫保豆腐": "kung-pao-tofu-xhs",
+  "无麸质杂菜豆腐": "blue-eyed-panda-mixed-vegetable-tofu-reference",
+  "宫保豆腐": "peace-garden-kung-pao-tofu-reference",
   "猪肉炖粉条": "pork-stewed-vermicelli-xhs"
 };
 
@@ -604,15 +697,25 @@ function dishImageMarkup(dish, className = "dish-image") {
   return `
     <figure class="${className}">
       <img src="${image.url}" alt="${dishLabel(dish)} reference photo" loading="lazy" data-dish-image />
-      <figcaption>${sourceCaption}</figcaption>
+      <figcaption>
+        <span>${sourceCaption}</span>
+        <span class="reference-only-badge">Image for reference only</span>
+      </figcaption>
     </figure>
   `;
 }
 
 function dishThumbnailMarkup(dish) {
   const image = dishImage(dish);
-  if (!image) return '<span class="dish-thumb dish-thumb-pending" aria-hidden="true">?</span>';
-  return `<img class="dish-thumb" src="${image.url}" alt="${dishLabel(dish)} thumbnail" loading="lazy" data-dish-thumbnail />`;
+  if (!image) {
+    return '<span class="dish-thumb-wrap"><span class="dish-thumb dish-thumb-pending" aria-label="Verified photo pending">Photo<br>pending</span></span>';
+  }
+  return `
+    <span class="dish-thumb-wrap">
+      <img class="dish-thumb" src="${image.url}" alt="${dishLabel(dish)} thumbnail" loading="lazy" data-dish-thumbnail />
+      <small class="dish-thumb-reference">Reference only</small>
+    </span>
+  `;
 }
 
 function bindDishImageFallbacks() {
@@ -637,9 +740,11 @@ function bindDishImageFallbacks() {
     const showFallback = () => {
       const fallback = document.createElement("span");
       fallback.className = "dish-thumb dish-thumb-pending";
-      fallback.setAttribute("aria-hidden", "true");
-      fallback.textContent = "?";
+      fallback.setAttribute("aria-label", "Reference image unavailable");
+      fallback.textContent = "Image unavailable";
       image.replaceWith(fallback);
+      const referenceNote = fallback.closest(".dish-thumb-wrap")?.querySelector(".dish-thumb-reference");
+      if (referenceNote) referenceNote.remove();
     };
     image.addEventListener("error", showFallback, { once: true });
     if (image.complete && image.naturalWidth === 0) showFallback();

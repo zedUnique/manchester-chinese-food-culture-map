@@ -46,6 +46,13 @@ const imageLibrary = parseAppConstant("dishImageLibrary", "\\[", "\\]");
 const imageAssignments = parseAppConstant("dishImageAssignments", "\\{", "\\}");
 const imageIds = new Set(imageLibrary.map((image) => image.id));
 
+for (const image of imageLibrary) {
+  if (image.url?.startsWith("./")) {
+    const localPath = path.join(root, image.url.slice(2));
+    if (!fs.existsSync(localPath)) errors.push(`Image ${image.id} references missing local file ${image.url}`);
+  }
+}
+
 for (const duplicate of new Set(duplicates(restaurantIds))) {
   errors.push(`Duplicate restaurant id: ${duplicate}`);
 }
@@ -107,6 +114,8 @@ const missingImages = uniqueDishNames.filter((name) => {
 const unknownImageAssignments = Object.entries(imageAssignments)
   .filter(([, imageId]) => !imageIds.has(imageId))
   .map(([dishName, imageId]) => `${dishName} -> ${imageId}`);
+const staleImageAssignments = Object.keys(imageAssignments)
+  .filter((dishName) => !uniqueDishNames.includes(dishName));
 const imagesById = new Map(imageLibrary.map((image) => [image.id, image]));
 const generalImageAssignments = Object.entries(imageAssignments)
   .filter(([, imageId]) => imagesById.get(imageId)?.referenceType === "general")
@@ -121,6 +130,7 @@ const reusedImageAssignments = [...dishesByImageId.entries()]
   .map(([imageId, dishNames]) => `${imageId}: ${dishNames.join(", ")}`);
 
 if (missingImages.length) warnings.push(`${missingImages.length} dish names intentionally have no verified image: ${missingImages.join(", ")}`);
+if (staleImageAssignments.length) warnings.push(`${staleImageAssignments.length} image assignments do not match any current dish: ${staleImageAssignments.join(", ")}`);
 if (generalImageAssignments.length) warnings.push(`${generalImageAssignments.length} dish images are still general references: ${generalImageAssignments.join("; ")}`);
 if (reusedImageAssignments.length) warnings.push(`${reusedImageAssignments.length} image files are reused across dish labels: ${reusedImageAssignments.join("; ")}`);
 for (const assignment of unknownImageAssignments) errors.push(`Unknown image assignment: ${assignment}`);
