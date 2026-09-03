@@ -1040,12 +1040,13 @@ function renderProvinceButtons() {
       const isActive = province.id === state.provinceId;
       const radius = isActive ? 28 : 21;
       const markerLines = provinceMarkerLabels[province.id] || [provinceLabel(province)];
-      const firstLineY = province.y - ((markerLines.length - 1) * 8) / 2 + 3;
+      const lineGap = isActive ? 9 : 8;
+      const firstLineY = province.y - ((markerLines.length - 1) * lineGap) / 2;
       return `
         <g class="province-node ${isActive ? "is-active" : ""}" data-province="${province.id}" tabindex="0" role="button" aria-label="Select ${provinceLabel(province)}">
           <circle cx="${province.x}" cy="${province.y}" r="${radius}" fill="${province.color}" />
-          <text class="province-name" x="${province.x}" text-anchor="middle">
-            ${markerLines.map((line, index) => `<tspan x="${province.x}" y="${firstLineY + index * 8}">${line}</tspan>`).join("")}
+          <text class="province-name" x="${province.x}" text-anchor="middle" dominant-baseline="middle">
+            ${markerLines.map((line, index) => `<tspan x="${province.x}" y="${firstLineY + index * lineGap}">${line}</tspan>`).join("")}
           </text>
         </g>
       `;

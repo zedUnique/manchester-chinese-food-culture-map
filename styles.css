@@ -705,6 +705,7 @@ h2 {
   stroke: var(--cream);
   stroke-width: 3;
   transition: transform 160ms ease, opacity 160ms ease;
+  transform-box: fill-box;
   transform-origin: center;
   filter: drop-shadow(0 10px 14px rgba(64, 43, 24, 0.16));
 }
@@ -721,6 +722,7 @@ h2 {
   fill: #fff;
   font-size: 7.5px;
   font-weight: 800;
+  dominant-baseline: middle;
   pointer-events: none;
 }
 
